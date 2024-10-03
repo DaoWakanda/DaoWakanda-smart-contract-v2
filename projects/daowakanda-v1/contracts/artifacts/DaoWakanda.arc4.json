@@ -1,0 +1,94 @@
+{
+  "name": "DaoWakanda",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "desc": "This creates a new Dao and also creates the associated\nASA.",
+      "args": [
+        {
+          "name": "title",
+          "type": "string",
+          "desc": "The title of the new Dao."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "desc": "The description of the new DAO."
+        },
+        {
+          "name": "endDate",
+          "type": "uint64",
+          "desc": "The timestamp of the end date."
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "getDaoDetails",
+      "desc": "This returns all the information of the DAO in this order:\ntitle, description, endDate, voteCount, yesVoteCount, noVoteCount, registeredASA",
+      "args": [],
+      "returns": {
+        "type": "(string,string,uint64,uint64,uint64,uint64,uint64,uint64)",
+        "desc": "Dao Details"
+      }
+    },
+    {
+      "name": "createDaoASA",
+      "desc": "This method creates the associated ASA for the DAO.",
+      "args": [
+        {
+          "name": "minimumBalanceTransaction",
+          "type": "pay",
+          "desc": "Transaction that pays the minimum balance amount\ninto the contract"
+        }
+      ],
+      "returns": {
+        "type": "uint64",
+        "desc": "Asset ID"
+      }
+    },
+    {
+      "name": "register",
+      "desc": "Registers an address as a voter for the DAO.",
+      "args": [
+        {
+          "name": "registeredASA",
+          "type": "asset",
+          "desc": "ASA ID of DAO Asa."
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "vote",
+      "desc": "Casts a vote.",
+      "args": [
+        {
+          "name": "registeredASA",
+          "type": "asset",
+          "desc": "Asset ID for DAO ASA."
+        },
+        {
+          "name": "inFavor",
+          "type": "bool",
+          "desc": "Indicates whether the vote is in favor of\nor against the proposal."
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "manuallyCloseVoting",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}

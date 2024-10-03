@@ -1,0 +1,512 @@
+{
+  "last-round": 670,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "amt": 200000,
+                "fee": 1000,
+                "fv": 670,
+                "gen": "dockernet-v1",
+                "gh": "1CG97CEb2wXYjtth9s02TWwRYyE3RgaU/a99YfR8e2I=",
+                "grp": "iiPF2uRIP629hjbbEBOREr6Qk1f8i00fLqCT3nL15qE=",
+                "lv": 1670,
+                "rcv": "yGEh2t3GgE0nlH0P6CgDeW553ppaLFYJGiYgCJsW0so=",
+                "snd": "5//b6nJ3sk+OgqGPIzAFOvEG88idvl/etbWAigC9dk4=",
+                "type": "pay"
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "apaa": [
+                  "xGg1RA=="
+                ],
+                "apid": 1729,
+                "fee": 1000,
+                "fv": 670,
+                "gen": "dockernet-v1",
+                "gh": "1CG97CEb2wXYjtth9s02TWwRYyE3RgaU/a99YfR8e2I=",
+                "grp": "iiPF2uRIP629hjbbEBOREr6Qk1f8i00fLqCT3nL15qE=",
+                "lv": 1670,
+                "snd": "5//b6nJ3sk+OgqGPIzAFOvEG88idvl/etbWAigC9dk4=",
+                "type": "appl"
+              }
+            }
+          },
+          "app-budget-consumed": 56,
+          "exec-trace": {
+            "approval-program-hash": "3eq7JC7+ynI5RzciOcHSfYgXdxZBI8vgQQaaiHZBjgQ=",
+            "approval-program-trace": [
+              {
+                "pc": 1
+              },
+              {
+                "pc": 4
+              },
+              {
+                "pc": 52,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1729
+                  }
+                ]
+              },
+              {
+                "pc": 54,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 55,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 6
+                  }
+                ]
+              },
+              {
+                "pc": 57,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 58,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 60,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 61,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 370,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "g64P/w=="
+                  }
+                ]
+              },
+              {
+                "pc": 376,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "xGg1RA=="
+                  }
+                ]
+              },
+              {
+                "pc": 382,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "xGg1RA=="
+                  }
+                ]
+              },
+              {
+                "pc": 385,
+                "stack-pop-count": 3
+              },
+              {
+                "pc": 260,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "FR98dQ=="
+                  }
+                ]
+              },
+              {
+                "pc": 262,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ]
+              },
+              {
+                "pc": 264,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ]
+              },
+              {
+                "pc": 265,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 266,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  },
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 267,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 269,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ]
+              },
+              {
+                "pc": 270,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 271,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 272
+              },
+              {
+                "pc": 280
+              },
+              {
+                "pc": 283,
+                "stack-additions": [
+                  {
+                    "type": 1
+                  }
+                ]
+              },
+              {
+                "pc": 284,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 286,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "5//b6nJ3sk+OgqGPIzAFOvEG88idvl/etbWAigC9dk4="
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 288,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "5//b6nJ3sk+OgqGPIzAFOvEG88idvl/etbWAigC9dk4="
+                  }
+                ]
+              },
+              {
+                "pc": 290,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 291,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 292,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 294,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "yGEh2t3GgE0nlH0P6CgDeW553ppaLFYJGiYgCJsW0so="
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 296,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "yGEh2t3GgE0nlH0P6CgDeW553ppaLFYJGiYgCJsW0so="
+                  }
+                ]
+              },
+              {
+                "pc": 298,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 299,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 300,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 302,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 200000
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 304,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 100000
+                  }
+                ]
+              },
+              {
+                "pc": 306,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 307,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 308
+              },
+              {
+                "pc": 309,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 3
+                  }
+                ]
+              },
+              {
+                "pc": 311,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 313,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1000000
+                  }
+                ]
+              },
+              {
+                "pc": 317,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 319,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "REFPXw=="
+                  }
+                ]
+              },
+              {
+                "pc": 325,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "dGl0bGU="
+                  }
+                ]
+              },
+              {
+                "pc": 326,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "AApEYW9XYWthbmRh"
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 327,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "RGFvV2FrYW5kYQ=="
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 330,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "REFPX0Rhb1dha2FuZGE="
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 331,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 333,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "yGEh2t3GgE0nlH0P6CgDeW553ppaLFYJGiYgCJsW0so="
+                  }
+                ]
+              },
+              {
+                "pc": 335,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 337,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 339,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 341
+              }
+            ]
+          }
+        }
+      ],
+      "app-budget-added": 700,
+      "app-budget-consumed": 56,
+      "failed-at": [
+        1
+      ],
+      "failure-message": "transaction YPKHP2EBVAYZVVBTHZOFZXVFHWTNDP5RJIRYIVJWY6HLDKQT2TPA: logic eval error: fee too small []transactions.SignedTxnWithAD{transactions.SignedTxnWithAD{_struct:struct {}{}, SignedTxn:transactions.SignedTxn{_struct:struct {}{}, Sig:crypto.Signature{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Msig:crypto.MultisigSig{_struct:struct {}{}, Version:0x0, Threshold:0x0, Subsigs:[]crypto.MultisigSubsig(nil)}, Lsig:transactions.LogicSig{_struct:struct {}{}, Logic:[]uint8(nil), Sig:crypto.Signature{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Msig:crypto.MultisigSig{_struct:struct {}{}, Version:0x0, Threshold:0x0, Subsigs:[]crypto.MultisigSubsig(nil)}, Args:[][]uint8(nil)}, Txn:transactions.Transaction{_struct:struct {}{}, Type:\"acfg\", Header:transactions.Header{_struct:struct {}{}, Sender:basics.Address{0xc8, 0x61, 0x21, 0xda, 0xdd, 0xc6, 0x80, 0x4d, 0x27, 0x94, 0x7d, 0xf, 0xe8, 0x28, 0x3, 0x79, 0x6e, 0x79, 0xde, 0x9a, 0x5a, 0x2c, 0x56, 0x9, 0x1a, 0x26, 0x20, 0x8, 0x9b, 0x16, 0xd2, 0xca}, Fee:basics.MicroAlgos{Raw:0x0}, FirstValid:0x29e, LastValid:0x686, Note:[]uint8(nil), GenesisID:\"\", GenesisHash:crypto.Digest{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Group:crypto.Digest{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Lease:[32]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, RekeyTo:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}, KeyregTxnFields:transactions.KeyregTxnFields{_struct:struct {}{}, VotePK:crypto.OneTimeSignatureVerifier{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, SelectionPK:crypto.VrfPubkey{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, StateProofPK:merklesignature.Commitment{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, VoteFirst:0x0, VoteLast:0x0, VoteKeyDilution:0x0, Nonparticipation:false}, PaymentTxnFields:transactions.PaymentTxnFields{_struct:struct {}{}, Receiver:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Amount:basics.MicroAlgos{Raw:0x0}, CloseRemainderTo:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}, AssetConfigTxnFields:transactions.AssetConfigTxnFields{_struct:struct {}{}, ConfigAsset:0x0, AssetParams:basics.AssetParams{_struct:struct {}{}, Total:0xf4240, Decimals:0x0, DefaultFrozen:false, UnitName:\"\", AssetName:\"DAO_DaoWakanda\", URL:\"\", MetadataHash:[32]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Manager:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Reserve:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Freeze:basics.Address{0xc8, 0x61, 0x21, 0xda, 0xdd, 0xc6, 0x80, 0x4d, 0x27, 0x94, 0x7d, 0xf, 0xe8, 0x28, 0x3, 0x79, 0x6e, 0x79, 0xde, 0x9a, 0x5a, 0x2c, 0x56, 0x9, 0x1a, 0x26, 0x20, 0x8, 0x9b, 0x16, 0xd2, 0xca}, Clawback:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}}, AssetTransferTxnFields:transactions.AssetTransferTxnFields{_struct:struct {}{}, XferAsset:0x0, AssetAmount:0x0, AssetSender:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, AssetReceiver:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, AssetCloseTo:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}, AssetFreezeTxnFields:transactions.AssetFreezeTxnFields{_struct:struct {}{}, FreezeAccount:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, FreezeAsset:0x0, AssetFrozen:false}, ApplicationCallTxnFields:transactions.ApplicationCallTxnFields{_struct:struct {}{}, ApplicationID:0x0, OnCompletion:0x0, ApplicationArgs:[][]uint8(nil), Accounts:[]basics.Address(nil), ForeignApps:[]basics.AppIndex(nil), Boxes:[]transactions.BoxRef(nil), ForeignAssets:[]basics.AssetIndex(nil), LocalStateSchema:basics.StateSchema{_struct:struct {}{}, NumUint:0x0, NumByteSlice:0x0}, GlobalStateSchema:basics.StateSchema{_struct:struct {}{}, NumUint:0x0, NumByteSlice:0x0}, ApprovalProgram:[]uint8(nil), ClearStateProgram:[]uint8(nil), ExtraProgramPages:0x0}, StateProofTxnFields:transactions.StateProofTxnFields{_struct:struct {}{}, StateProofType:0x0, StateProof:stateproof.StateProof{_struct:struct {}{}, SigCommit:crypto.GenericDigest(nil), SignedWeight:0x0, SigProofs:merklearray.Proof{_struct:struct {}{}, Path:[]crypto.GenericDigest(nil), HashFactory:crypto.HashFactory{_struct:struct {}{}, HashType:0x0}, TreeDepth:0x0}, PartProofs:merklearray.Proof{_struct:struct {}{}, Path:[]crypto.GenericDigest(nil), HashFactory:crypto.HashFactory{_struct:struct {}{}, HashType:0x0}, TreeDepth:0x0}, MerkleSignatureSaltVersion:0x0, Reveals:map[uint64]stateproof.Reveal(nil), PositionsToReveal:[]uint64(nil)}, Message:stateproofmsg.Message{_struct:struct {}{}, BlockHeadersCommitment:[]uint8(nil), VotersCommitment:[]uint8(nil), LnProvenWeight:0x0, FirstAttestedRound:0x0, LastAttestedRound:0x0}}}, AuthAddr:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}, ApplyData:transactions.ApplyData{_struct:struct {}{}, ClosingAmount:basics.MicroAlgos{Raw:0x0}, AssetClosingAmount:0x0, SenderRewards:basics.MicroAlgos{Raw:0x0}, ReceiverRewards:basics.MicroAlgos{Raw:0x0}, CloseRewards:basics.MicroAlgos{Raw:0x0}, EvalDelta:transactions.EvalDelta{_struct:struct {}{}, GlobalDelta:basics.StateDelta(nil), LocalDeltas:map[uint64]basics.StateDelta(nil), SharedAccts:[]basics.Address(nil), Logs:[]string(nil), InnerTxns:[]transactions.SignedTxnWithAD(nil)}, ConfigAsset:0x0, ApplicationID:0x0}}}. Details: app=1729, pc=341, opcodes=pushint 0; itxn_field Fee; itxn_submit"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  },
+  "initial-states": {
+    "app-initial-states": [
+      {
+        "id": 1729,
+        "app-globals": {
+          "kvs": [
+            {
+              "key": "dGl0bGU=",
+              "value": {
+                "type": 1,
+                "bytes": "AApEYW9XYWthbmRh"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
