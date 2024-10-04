@@ -4,7 +4,7 @@
   "methods": [
     {
       "name": "createApplication",
-      "desc": "This creates a new Dao and also creates the associated\nASA.",
+      "desc": "This creates a new Dao.",
       "args": [
         {
           "name": "title",

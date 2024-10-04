@@ -72,7 +72,7 @@ export class DaoWakanda extends Contract {
 
     const registeredASA = sendAssetCreation({
       configAssetTotal: 1_000_000,
-      configAssetName: 'DAO' + this.title.value,
+      configAssetName: 'DAOWAKANDA_VOTING',
       configAssetFreeze: this.app.address,
     });
 
