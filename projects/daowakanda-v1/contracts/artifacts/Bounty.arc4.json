@@ -1,0 +1,33 @@
+{
+  "name": "Bounty",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "issueBounty",
+      "args": [
+        {
+          "name": "payTxn",
+          "type": "pay"
+        },
+        {
+          "name": "amount",
+          "type": "uint64"
+        },
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}
