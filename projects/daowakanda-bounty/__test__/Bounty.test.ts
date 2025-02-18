@@ -83,8 +83,7 @@ describe('Bounty', () => {
       ],
       // extraFee
     });
-
-    console.debug('response', response);
+    
     // expect(response.confirmation).toBeDefined();
   });
 
@@ -119,7 +118,6 @@ describe('Bounty', () => {
       // extraFee
     });
 
-    console.debug('response', response);
     // expect(response.confirmation).toBeDefined();
   });
 
@@ -127,18 +125,19 @@ describe('Bounty', () => {
     const { algorand } = fixture;
     const suggestedParams = await algokit.getTransactionParams(undefined, fixture.algorand.client.algod);
 
-    // const paymentTxn = makePaymentTxnWithSuggestedParamsFromObject({
-    //   from: admin.addr,
-    //   to: appClient.appClient.appAddress,
-    //   suggestedParams,
-    // });
+    const paymentTxn = makePaymentTxnWithSuggestedParamsFromObject({
+      from: claimer.addr,
+      to: appClient.appClient.appAddress,
+      amount: 0, 
+      suggestedParams,
+    });
 
     console.debug('claimer', claimer.addr);
 
-    const response = await appClient.send.claim({
-      args: {},
-      sender: admin.addr,
-      signer: makeBasicAccountTransactionSigner(admin),
+    const response = await appClient.send.claimBounty({
+      args: {payTxn: paymentTxn},
+      sender: claimer.addr,
+      signer: makeBasicAccountTransactionSigner(claimer),
       boxReferences: [
         {
           appId: appClient.appId,
@@ -148,10 +147,6 @@ describe('Bounty', () => {
       extraFee: algokit.algos(0.002),
     });
 
-    const { address, balance } = await algorand.account.getInformation(claimer.addr);
-
-    console.debug('addr', address);
-    console.debug('balance', balance);
     // expect(response.confirmation).toBeDefined();
   });
 });

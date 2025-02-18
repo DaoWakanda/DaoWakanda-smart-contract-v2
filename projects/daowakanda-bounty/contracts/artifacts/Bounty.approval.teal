@@ -182,24 +182,37 @@ issueBounty:
 *if0_end:
 	retsub
 
-// claim()void
-*abi_route_claim:
-	// execute claim()void
-	callsub claim
+// claimBounty(pay)void
+*abi_route_claimBounty:
+	// payTxn: pay
+	txn GroupIndex
+	intc 0 // 1
+	-
+	dup
+	gtxns TypeEnum
+	intc 0 //  pay
+	==
+
+	// argument 0 (payTxn) for claimBounty must be a pay transaction
+	assert
+
+	// execute claimBounty(pay)void
+	callsub claimBounty
 	intc 0 // 1
 	return
 
-// claim(): void
-claim:
-	proto 0 0
+// claimBounty(payTxn: PayTxn): void
+claimBounty:
+	proto 1 0
 
 	// Push empty bytes after the frame pointer to reserve space for local variables
 	bytec 0 // 0x
 	dup
 
 	// contracts/Bounty.algo.ts:35
-	// addr = this.txn.sender
-	txn Sender
+	// addr = payTxn.sender
+	frame_dig -1 // payTxn: PayTxn
+	gtxns Sender
 	frame_bury 0 // addr: address
 
 	// contracts/Bounty.algo.ts:36
@@ -290,9 +303,9 @@ claim:
 
 *call_NoOp:
 	pushbytes 0xf89e0497 // method "issueBounty(pay,uint64,address)void"
-	pushbytes 0xf1577726 // method "claim()void"
+	pushbytes 0xd2762eca // method "claimBounty(pay)void"
 	txna ApplicationArgs 0
-	match *abi_route_issueBounty *abi_route_claim
+	match *abi_route_issueBounty *abi_route_claimBounty
 
 	// this contract does not implement the given ABI method for call NoOp
 	err

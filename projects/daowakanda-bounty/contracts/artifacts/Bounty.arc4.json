@@ -23,8 +23,13 @@
       }
     },
     {
-      "name": "claim",
-      "args": [],
+      "name": "claimBounty",
+      "args": [
+        {
+          "name": "payTxn",
+          "type": "pay"
+        }
+      ],
       "returns": {
         "type": "void"
       }

@@ -31,8 +31,8 @@ export class Bounty extends Contract {
     }
   }
 
-  claim() {
-    const addr = this.txn.sender;
+  claimBounty(payTxn: PayTxn) {
+    const addr = payTxn.sender;
     assert(this.bountyBox(addr).exists, 'Sorry, you have no bounty to claim');
 
     const amount = this.bountyBox(addr).value;
