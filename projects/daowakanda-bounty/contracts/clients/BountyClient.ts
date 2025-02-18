@@ -24,7 +24,7 @@ import { SendParams, SendSingleTransactionResult, SendAtomicTransactionComposerR
 import { Address, encodeAddress, modelsv2, OnApplicationComplete, Transaction, TransactionSigner } from 'algosdk'
 import SimulateResponse = modelsv2.SimulateResponse
 
-export const APP_SPEC: Arc56Contract = {"name":"Bounty","desc":"","methods":[{"name":"issueBounty","args":[{"name":"payTxn","type":"pay"},{"name":"amount","type":"uint64"},{"name":"addr","type":"address"}],"returns":{"type":"void"},"actions":{"create":[],"call":["NoOp"]}},{"name":"createApplication","args":[],"returns":{"type":"void"},"actions":{"create":["NoOp"],"call":[]}}],"arcs":[4,56],"structs":{},"state":{"schema":{"global":{"bytes":0,"ints":0},"local":{"bytes":0,"ints":0}},"keys":{"global":{},"local":{},"box":{}},"maps":{"global":{},"local":{},"box":{"bountyBox":{"keyType":"address","valueType":"uint64"}}}},"bareActions":{"create":[],"call":[]},"sourceInfo":{"approval":{"sourceInfo":[{"teal":1,"source":"contracts/Bounty.algo.ts:7","pc":[0]},{"teal":2,"source":"contracts/Bounty.algo.ts:7","pc":[1,2,3,4,5,6]},{"teal":14,"source":"contracts/Bounty.algo.ts:7","pc":[7,8]},{"teal":15,"source":"contracts/Bounty.algo.ts:7","pc":[9]},{"teal":16,"source":"contracts/Bounty.algo.ts:7","pc":[10,11]},{"teal":17,"source":"contracts/Bounty.algo.ts:7","pc":[12]},{"teal":18,"source":"contracts/Bounty.algo.ts:7","pc":[13,14]},{"teal":19,"source":"contracts/Bounty.algo.ts:7","pc":[15]},{"teal":20,"source":"contracts/Bounty.algo.ts:7","pc":[16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]},{"teal":24,"source":"contracts/Bounty.algo.ts:7","errorMessage":"The requested action is not implemented in this contract. Are you using the correct OnComplete? Did you set your app ID?","pc":[42]},{"teal":29,"source":"contracts/Bounty.algo.ts:10","pc":[43,44,45]},{"teal":30,"source":"contracts/Bounty.algo.ts:10","pc":[46]},{"teal":31,"source":"contracts/Bounty.algo.ts:10","pc":[47]},{"teal":32,"source":"contracts/Bounty.algo.ts:10","pc":[48,49]},{"teal":33,"source":"contracts/Bounty.algo.ts:10","pc":[50]},{"teal":36,"source":"contracts/Bounty.algo.ts:10","errorMessage":"argument 0 (addr) for issueBounty must be a address","pc":[51]},{"teal":39,"source":"contracts/Bounty.algo.ts:10","pc":[52,53,54]},{"teal":40,"source":"contracts/Bounty.algo.ts:10","pc":[55]},{"teal":43,"source":"contracts/Bounty.algo.ts:10","pc":[56,57]},{"teal":44,"source":"contracts/Bounty.algo.ts:10","pc":[58]},{"teal":45,"source":"contracts/Bounty.algo.ts:10","pc":[59]},{"teal":46,"source":"contracts/Bounty.algo.ts:10","pc":[60]},{"teal":47,"source":"contracts/Bounty.algo.ts:10","pc":[61,62]},{"teal":48,"source":"contracts/Bounty.algo.ts:10","pc":[63]},{"teal":49,"source":"contracts/Bounty.algo.ts:10","pc":[64]},{"teal":52,"source":"contracts/Bounty.algo.ts:10","errorMessage":"argument 2 (payTxn) for issueBounty must be a pay transaction","pc":[65]},{"teal":55,"source":"contracts/Bounty.algo.ts:10","pc":[66,67,68]},{"teal":56,"source":"contracts/Bounty.algo.ts:10","pc":[69]},{"teal":57,"source":"contracts/Bounty.algo.ts:10","pc":[70]},{"teal":61,"source":"contracts/Bounty.algo.ts:10","pc":[71,72,73]},{"teal":64,"source":"contracts/Bounty.algo.ts:10","pc":[74,75]},{"teal":68,"source":"contracts/Bounty.algo.ts:11","pc":[76,77]},{"teal":69,"source":"contracts/Bounty.algo.ts:11","pc":[78,79]},{"teal":70,"source":"contracts/Bounty.algo.ts:11","pc":[80]},{"teal":73,"source":"contracts/Bounty.algo.ts:11","errorMessage":"amount must be greater than zero","pc":[81]},{"teal":77,"source":"contracts/Bounty.algo.ts:13","pc":[82]},{"teal":78,"source":"contracts/Bounty.algo.ts:13","pc":[83,84]},{"teal":83,"source":"contracts/Bounty.algo.ts:15","pc":[85,86]},{"teal":84,"source":"contracts/Bounty.algo.ts:15","pc":[87]},{"teal":85,"source":"contracts/Bounty.algo.ts:15","pc":[88]},{"teal":86,"source":"contracts/Bounty.algo.ts:15","pc":[89]},{"teal":87,"source":"contracts/Bounty.algo.ts:15","pc":[90,91,92]},{"teal":97,"source":"contracts/Bounty.algo.ts:16","pc":[93,94]},{"teal":98,"source":"contracts/Bounty.algo.ts:17","pc":[95,96]},{"teal":99,"source":"contracts/Bounty.algo.ts:17","pc":[97,98]},{"teal":100,"source":"contracts/Bounty.algo.ts:17","pc":[99]},{"teal":103,"source":"contracts/Bounty.algo.ts:17","errorMessage":"transaction verification failed: {\"txn\":\"payTxn\",\"field\":\"sender\",\"expected\":\"this.txn.sender\"}","pc":[100]},{"teal":106,"source":"contracts/Bounty.algo.ts:16","pc":[101,102]},{"teal":107,"source":"contracts/Bounty.algo.ts:18","pc":[103,104]},{"teal":108,"source":"contracts/Bounty.algo.ts:18","pc":[105,106]},{"teal":109,"source":"contracts/Bounty.algo.ts:18","pc":[107]},{"teal":112,"source":"contracts/Bounty.algo.ts:18","errorMessage":"transaction verification failed: {\"txn\":\"payTxn\",\"field\":\"receiver\",\"expected\":\"this.app.address\"}","pc":[108]},{"teal":115,"source":"contracts/Bounty.algo.ts:16","pc":[109,110]},{"teal":116,"source":"contracts/Bounty.algo.ts:19","pc":[111,112]},{"teal":117,"source":"contracts/Bounty.algo.ts:19","pc":[113,114]},{"teal":118,"source":"contracts/Bounty.algo.ts:19","pc":[115]},{"teal":121,"source":"contracts/Bounty.algo.ts:19","errorMessage":"transaction verification failed: {\"txn\":\"payTxn\",\"field\":\"amount\",\"expected\":\"amount\"}","pc":[116]},{"teal":125,"source":"contracts/Bounty.algo.ts:22","pc":[117,118]},{"teal":126,"source":"contracts/Bounty.algo.ts:22","pc":[119,120]},{"teal":127,"source":"contracts/Bounty.algo.ts:22","pc":[121]},{"teal":130,"source":"contracts/Bounty.algo.ts:22","errorMessage":"box value does not exist: this.bountyBox(addr).value","pc":[122]},{"teal":131,"source":"contracts/Bounty.algo.ts:22","pc":[123]},{"teal":132,"source":"contracts/Bounty.algo.ts:22","pc":[124,125]},{"teal":133,"source":"contracts/Bounty.algo.ts:22","pc":[126]},{"teal":134,"source":"contracts/Bounty.algo.ts:22","pc":[127]},{"teal":135,"source":"contracts/Bounty.algo.ts:22","pc":[128]},{"teal":136,"source":"contracts/Bounty.algo.ts:15","pc":[129,130,131]},{"teal":146,"source":"contracts/Bounty.algo.ts:24","pc":[132,133]},{"teal":147,"source":"contracts/Bounty.algo.ts:25","pc":[134,135]},{"teal":148,"source":"contracts/Bounty.algo.ts:25","pc":[136,137]},{"teal":149,"source":"contracts/Bounty.algo.ts:25","pc":[138]},{"teal":152,"source":"contracts/Bounty.algo.ts:25","errorMessage":"transaction verification failed: {\"txn\":\"payTxn\",\"field\":\"sender\",\"expected\":\"this.txn.sender\"}","pc":[139]},{"teal":155,"source":"contracts/Bounty.algo.ts:24","pc":[140,141]},{"teal":156,"source":"contracts/Bounty.algo.ts:26","pc":[142,143]},{"teal":157,"source":"contracts/Bounty.algo.ts:26","pc":[144,145]},{"teal":158,"source":"contracts/Bounty.algo.ts:26","pc":[146]},{"teal":161,"source":"contracts/Bounty.algo.ts:26","errorMessage":"transaction verification failed: {\"txn\":\"payTxn\",\"field\":\"receiver\",\"expected\":\"this.app.address\"}","pc":[147]},{"teal":164,"source":"contracts/Bounty.algo.ts:24","pc":[148,149]},{"teal":165,"source":"contracts/Bounty.algo.ts:27","pc":[150,151]},{"teal":166,"source":"contracts/Bounty.algo.ts:27","pc":[152]},{"teal":167,"source":"contracts/Bounty.algo.ts:27","pc":[153,154]},{"teal":168,"source":"contracts/Bounty.algo.ts:27","pc":[155]},{"teal":169,"source":"contracts/Bounty.algo.ts:27","pc":[156]},{"teal":172,"source":"contracts/Bounty.algo.ts:27","errorMessage":"transaction verification failed: {\"txn\":\"payTxn\",\"field\":\"amount\",\"expected\":\"totalCost + amount\"}","pc":[157]},{"teal":176,"source":"contracts/Bounty.algo.ts:30","pc":[158,159]},{"teal":177,"source":"contracts/Bounty.algo.ts:30","pc":[160,161]},{"teal":178,"source":"contracts/Bounty.algo.ts:30","pc":[162]},{"teal":179,"source":"contracts/Bounty.algo.ts:30","pc":[163]},{"teal":182,"source":"contracts/Bounty.algo.ts:10","pc":[164]},{"teal":185,"source":"contracts/Bounty.algo.ts:7","pc":[165]},{"teal":186,"source":"contracts/Bounty.algo.ts:7","pc":[166]},{"teal":189,"source":"contracts/Bounty.algo.ts:7","pc":[167,168,169,170,171,172]},{"teal":190,"source":"contracts/Bounty.algo.ts:7","pc":[173,174,175]},{"teal":191,"source":"contracts/Bounty.algo.ts:7","pc":[176,177,178,179]},{"teal":194,"source":"contracts/Bounty.algo.ts:7","errorMessage":"this contract does not implement the given ABI method for create NoOp","pc":[180]},{"teal":197,"source":"contracts/Bounty.algo.ts:7","pc":[181,182,183,184,185,186]},{"teal":198,"source":"contracts/Bounty.algo.ts:7","pc":[187,188,189]},{"teal":199,"source":"contracts/Bounty.algo.ts:7","pc":[190,191,192,193]},{"teal":202,"source":"contracts/Bounty.algo.ts:7","errorMessage":"this contract does not implement the given ABI method for call NoOp","pc":[194]}],"pcOffsetMethod":"none"},"clear":{"sourceInfo":[],"pcOffsetMethod":"none"}},"source":{"approval":"I3ByYWdtYSB2ZXJzaW9uIDEwCmludGNibG9jayAxIDEzMTMwMAoKLy8gVGhpcyBURUFMIHdhcyBnZW5lcmF0ZWQgYnkgVEVBTFNjcmlwdCB2MC4xMDYuMgovLyBodHRwczovL2dpdGh1Yi5jb20vYWxnb3JhbmRmb3VuZGF0aW9uL1RFQUxTY3JpcHQKCi8vIFRoaXMgY29udHJhY3QgaXMgY29tcGxpYW50IHdpdGggYW5kL29yIGltcGxlbWVudHMgdGhlIGZvbGxvd2luZyBBUkNzOiBbIEFSQzQgXQoKLy8gVGhlIGZvbGxvd2luZyB0ZW4gbGluZXMgb2YgVEVBTCBoYW5kbGUgaW5pdGlhbCBwcm9ncmFtIGZsb3cKLy8gVGhpcyBwYXR0ZXJuIGlzIHVzZWQgdG8gbWFrZSBpdCBlYXN5IGZvciBhbnlvbmUgdG8gcGFyc2UgdGhlIHN0YXJ0IG9mIHRoZSBwcm9ncmFtIGFuZCBkZXRlcm1pbmUgaWYgYSBzcGVjaWZpYyBhY3Rpb24gaXMgYWxsb3dlZAovLyBIZXJlLCBhY3Rpb24gcmVmZXJzIHRvIHRoZSBPbkNvbXBsZXRlIGluIGNvbWJpbmF0aW9uIHdpdGggd2hldGhlciB0aGUgYXBwIGlzIGJlaW5nIGNyZWF0ZWQgb3IgY2FsbGVkCi8vIEV2ZXJ5IHBvc3NpYmxlIGFjdGlvbiBmb3IgdGhpcyBjb250cmFjdCBpcyByZXByZXNlbnRlZCBpbiB0aGUgc3dpdGNoIHN0YXRlbWVudAovLyBJZiB0aGUgYWN0aW9uIGlzIG5vdCBpbXBsZW1lbnRlZCBpbiB0aGUgY29udHJhY3QsIGl0cyByZXNwZWN0aXZlIGJyYW5jaCB3aWxsIGJlICIqTk9UX0lNUExFTUVOVEVEIiB3aGljaCBqdXN0IGNvbnRhaW5zICJlcnIiCnR4biBBcHBsaWNhdGlvbklECiEKcHVzaGludCA2CioKdHhuIE9uQ29tcGxldGlvbgorCnN3aXRjaCAqY2FsbF9Ob09wICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqY3JlYXRlX05vT3AgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVECgoqTk9UX0lNUExFTUVOVEVEOgoJLy8gVGhlIHJlcXVlc3RlZCBhY3Rpb24gaXMgbm90IGltcGxlbWVudGVkIGluIHRoaXMgY29udHJhY3QuIEFyZSB5b3UgdXNpbmcgdGhlIGNvcnJlY3QgT25Db21wbGV0ZT8gRGlkIHlvdSBzZXQgeW91ciBhcHAgSUQ/CgllcnIKCi8vIGlzc3VlQm91bnR5KHBheSx1aW50NjQsYWRkcmVzcyl2b2lkCiphYmlfcm91dGVfaXNzdWVCb3VudHk6CgkvLyBhZGRyOiBhZGRyZXNzCgl0eG5hIEFwcGxpY2F0aW9uQXJncyAyCglkdXAKCWxlbgoJcHVzaGludCAzMgoJPT0KCgkvLyBhcmd1bWVudCAwIChhZGRyKSBmb3IgaXNzdWVCb3VudHkgbXVzdCBiZSBhIGFkZHJlc3MKCWFzc2VydAoKCS8vIGFtb3VudDogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAxCglidG9pCgoJLy8gcGF5VHhuOiBwYXkKCXR4biBHcm91cEluZGV4CglpbnRjIDAgLy8gMQoJLQoJZHVwCglndHhucyBUeXBlRW51bQoJaW50YyAwIC8vICBwYXkKCT09CgoJLy8gYXJndW1lbnQgMiAocGF5VHhuKSBmb3IgaXNzdWVCb3VudHkgbXVzdCBiZSBhIHBheSB0cmFuc2FjdGlvbgoJYXNzZXJ0CgoJLy8gZXhlY3V0ZSBpc3N1ZUJvdW50eShwYXksdWludDY0LGFkZHJlc3Mpdm9pZAoJY2FsbHN1YiBpc3N1ZUJvdW50eQoJaW50YyAwIC8vIDEKCXJldHVybgoKLy8gaXNzdWVCb3VudHkocGF5VHhuOiBQYXlUeG4sIGFtb3VudDogdWludDY0LCBhZGRyOiBBZGRyZXNzKTogdm9pZAppc3N1ZUJvdW50eToKCXByb3RvIDMgMAoKCS8vIFB1c2ggZW1wdHkgYnl0ZXMgYWZ0ZXIgdGhlIGZyYW1lIHBvaW50ZXIgdG8gcmVzZXJ2ZSBzcGFjZSBmb3IgbG9jYWwgdmFyaWFibGVzCglwdXNoYnl0ZXMgMHgKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6MTEKCS8vIGFzc2VydChhbW91bnQgPiAwLCAnYW1vdW50IG11c3QgYmUgZ3JlYXRlciB0aGFuIHplcm8nKQoJZnJhbWVfZGlnIC0yIC8vIGFtb3VudDogdWludDY0CglwdXNoaW50IDAKCT4KCgkvLyBhbW91bnQgbXVzdCBiZSBncmVhdGVyIHRoYW4gemVybwoJYXNzZXJ0CgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjEzCgkvLyB0b3RhbENvc3QgPSBNQlIgKyBDT1NUX1BFUl9CT1ggKyBDT1NUX1BFUl9CWVRFICogKDggKyA2NCkKCWludGMgMSAvLyAxMzEzMDAKCWZyYW1lX2J1cnkgMCAvLyB0b3RhbENvc3Q6IHVpbnQ2NAoKCS8vICppZjBfY29uZGl0aW9uCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6MTUKCS8vIHRoaXMuYm91bnR5Qm94KGFkZHIpLmV4aXN0cwoJZnJhbWVfZGlnIC0zIC8vIGFkZHI6IEFkZHJlc3MKCWJveF9sZW4KCXN3YXAKCXBvcAoJYnogKmlmMF9lbHNlCgoJLy8gKmlmMF9jb25zZXF1ZW50CgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6MTYKCS8vIHZlcmlmeVBheVR4bihwYXlUeG4sIHsKCS8vICAgICAgICAgc2VuZGVyOiB0aGlzLnR4bi5zZW5kZXIsCgkvLyAgICAgICAgIHJlY2VpdmVyOiB0aGlzLmFwcC5hZGRyZXNzLAoJLy8gICAgICAgICBhbW91bnQ6IGFtb3VudCwKCS8vICAgICAgIH0pCgkvLyB2ZXJpZnkgc2VuZGVyCglmcmFtZV9kaWcgLTEgLy8gcGF5VHhuOiBQYXlUeG4KCWd0eG5zIFNlbmRlcgoJdHhuIFNlbmRlcgoJPT0KCgkvLyB0cmFuc2FjdGlvbiB2ZXJpZmljYXRpb24gZmFpbGVkOiB7InR4biI6InBheVR4biIsImZpZWxkIjoic2VuZGVyIiwiZXhwZWN0ZWQiOiJ0aGlzLnR4bi5zZW5kZXIifQoJYXNzZXJ0CgoJLy8gdmVyaWZ5IHJlY2VpdmVyCglmcmFtZV9kaWcgLTEgLy8gcGF5VHhuOiBQYXlUeG4KCWd0eG5zIFJlY2VpdmVyCglnbG9iYWwgQ3VycmVudEFwcGxpY2F0aW9uQWRkcmVzcwoJPT0KCgkvLyB0cmFuc2FjdGlvbiB2ZXJpZmljYXRpb24gZmFpbGVkOiB7InR4biI6InBheVR4biIsImZpZWxkIjoicmVjZWl2ZXIiLCJleHBlY3RlZCI6InRoaXMuYXBwLmFkZHJlc3MifQoJYXNzZXJ0CgoJLy8gdmVyaWZ5IGFtb3VudAoJZnJhbWVfZGlnIC0xIC8vIHBheVR4bjogUGF5VHhuCglndHhucyBBbW91bnQKCWZyYW1lX2RpZyAtMiAvLyBhbW91bnQ6IHVpbnQ2NAoJPT0KCgkvLyB0cmFuc2FjdGlvbiB2ZXJpZmljYXRpb24gZmFpbGVkOiB7InR4biI6InBheVR4biIsImZpZWxkIjoiYW1vdW50IiwiZXhwZWN0ZWQiOiJhbW91bnQifQoJYXNzZXJ0CgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjIyCgkvLyB0aGlzLmJvdW50eUJveChhZGRyKS52YWx1ZSA9IHRoaXMuYm91bnR5Qm94KGFkZHIpLnZhbHVlICsgYW1vdW50CglmcmFtZV9kaWcgLTMgLy8gYWRkcjogQWRkcmVzcwoJZnJhbWVfZGlnIC0zIC8vIGFkZHI6IEFkZHJlc3MKCWJveF9nZXQKCgkvLyBib3ggdmFsdWUgZG9lcyBub3QgZXhpc3Q6IHRoaXMuYm91bnR5Qm94KGFkZHIpLnZhbHVlCglhc3NlcnQKCWJ0b2kKCWZyYW1lX2RpZyAtMiAvLyBhbW91bnQ6IHVpbnQ2NAoJKwoJaXRvYgoJYm94X3B1dAoJYiAqaWYwX2VuZAoKKmlmMF9lbHNlOgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjI0CgkvLyB2ZXJpZnlQYXlUeG4ocGF5VHhuLCB7CgkvLyAgICAgICAgIHNlbmRlcjogdGhpcy50eG4uc2VuZGVyLAoJLy8gICAgICAgICByZWNlaXZlcjogdGhpcy5hcHAuYWRkcmVzcywKCS8vICAgICAgICAgYW1vdW50OiB0b3RhbENvc3QgKyBhbW91bnQsCgkvLyAgICAgICB9KQoJLy8gdmVyaWZ5IHNlbmRlcgoJZnJhbWVfZGlnIC0xIC8vIHBheVR4bjogUGF5VHhuCglndHhucyBTZW5kZXIKCXR4biBTZW5kZXIKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6InNlbmRlciIsImV4cGVjdGVkIjoidGhpcy50eG4uc2VuZGVyIn0KCWFzc2VydAoKCS8vIHZlcmlmeSByZWNlaXZlcgoJZnJhbWVfZGlnIC0xIC8vIHBheVR4bjogUGF5VHhuCglndHhucyBSZWNlaXZlcgoJZ2xvYmFsIEN1cnJlbnRBcHBsaWNhdGlvbkFkZHJlc3MKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6InJlY2VpdmVyIiwiZXhwZWN0ZWQiOiJ0aGlzLmFwcC5hZGRyZXNzIn0KCWFzc2VydAoKCS8vIHZlcmlmeSBhbW91bnQKCWZyYW1lX2RpZyAtMSAvLyBwYXlUeG46IFBheVR4bgoJZ3R4bnMgQW1vdW50CglpbnRjIDEgLy8gIHRvdGFsQ29zdDogdWludDY0CglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCSsKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6ImFtb3VudCIsImV4cGVjdGVkIjoidG90YWxDb3N0ICsgYW1vdW50In0KCWFzc2VydAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czozMAoJLy8gdGhpcy5ib3VudHlCb3goYWRkcikudmFsdWUgPSBhbW91bnQKCWZyYW1lX2RpZyAtMyAvLyBhZGRyOiBBZGRyZXNzCglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCWl0b2IKCWJveF9wdXQKCippZjBfZW5kOgoJcmV0c3ViCgoqYWJpX3JvdXRlX2NyZWF0ZUFwcGxpY2F0aW9uOgoJaW50YyAwIC8vIDEKCXJldHVybgoKKmNyZWF0ZV9Ob09wOgoJcHVzaGJ5dGVzIDB4Yjg0NDdiMzYgLy8gbWV0aG9kICJjcmVhdGVBcHBsaWNhdGlvbigpdm9pZCIKCXR4bmEgQXBwbGljYXRpb25BcmdzIDAKCW1hdGNoICphYmlfcm91dGVfY3JlYXRlQXBwbGljYXRpb24KCgkvLyB0aGlzIGNvbnRyYWN0IGRvZXMgbm90IGltcGxlbWVudCB0aGUgZ2l2ZW4gQUJJIG1ldGhvZCBmb3IgY3JlYXRlIE5vT3AKCWVycgoKKmNhbGxfTm9PcDoKCXB1c2hieXRlcyAweGY4OWUwNDk3IC8vIG1ldGhvZCAiaXNzdWVCb3VudHkocGF5LHVpbnQ2NCxhZGRyZXNzKXZvaWQiCgl0eG5hIEFwcGxpY2F0aW9uQXJncyAwCgltYXRjaCAqYWJpX3JvdXRlX2lzc3VlQm91bnR5CgoJLy8gdGhpcyBjb250cmFjdCBkb2VzIG5vdCBpbXBsZW1lbnQgdGhlIGdpdmVuIEFCSSBtZXRob2QgZm9yIGNhbGwgTm9PcAoJZXJy","clear":"I3ByYWdtYSB2ZXJzaW9uIDEw"},"byteCode":{"approval":"CiACAeSBCDEYFIEGCzEZCI0MAIsAAAAAAAAAAAAAAH0AAAAAAAAAAAAAADYaAkkVgSASRDYaARcxFiIJSTgQIhJEiAACIkOKAwCAAIv+gQANRCOMAIv9vUxIQQAni/84ADEAEkSL/zgHMgoSRIv/OAiL/hJEi/2L/b5EF4v+CBa/QgAgi/84ADEAEkSL/zgHMgoSRIv/OAgji/4IEkSL/Yv+Fr+JIkOABLhEezY2GgCOAf/xAIAE+J4ElzYaAI4B/2kA","clear":"Cg=="},"compilerInfo":{"compiler":"algod","compilerVersion":{"major":4,"minor":0,"patch":1,"commitHash":"63d271cf"}}} as unknown as Arc56Contract
+export const APP_SPEC: Arc56Contract = {"arcs":[],"name":"Bounty","desc":"","structs":{},"methods":[{"name":"issueBounty","args":[{"name":"payTxn","type":"pay"},{"name":"amount","type":"uint64"},{"name":"addr","type":"address"}],"returns":{"type":"void"},"events":[],"actions":{"create":[],"call":["NoOp"]}},{"name":"claim","args":[],"returns":{"type":"void"},"events":[],"actions":{"create":[],"call":["NoOp"]}},{"name":"createApplication","args":[],"returns":{"type":"void"},"events":[],"actions":{"create":["NoOp"],"call":[]}}],"state":{"schema":{"global":{"ints":0,"bytes":0},"local":{"ints":0,"bytes":0}},"keys":{"global":{},"local":{},"box":{}},"maps":{"global":{},"local":{},"box":{}}},"source":{"approval":"I3ByYWdtYSB2ZXJzaW9uIDEwCmludGNibG9jayAxIDAgMTMxMzAwCmJ5dGVjYmxvY2sgMHgKCi8vIFRoaXMgVEVBTCB3YXMgZ2VuZXJhdGVkIGJ5IFRFQUxTY3JpcHQgdjAuMTA2LjIKLy8gaHR0cHM6Ly9naXRodWIuY29tL2FsZ29yYW5kZm91bmRhdGlvbi9URUFMU2NyaXB0CgovLyBUaGlzIGNvbnRyYWN0IGlzIGNvbXBsaWFudCB3aXRoIGFuZC9vciBpbXBsZW1lbnRzIHRoZSBmb2xsb3dpbmcgQVJDczogWyBBUkM0IF0KCi8vIFRoZSBmb2xsb3dpbmcgdGVuIGxpbmVzIG9mIFRFQUwgaGFuZGxlIGluaXRpYWwgcHJvZ3JhbSBmbG93Ci8vIFRoaXMgcGF0dGVybiBpcyB1c2VkIHRvIG1ha2UgaXQgZWFzeSBmb3IgYW55b25lIHRvIHBhcnNlIHRoZSBzdGFydCBvZiB0aGUgcHJvZ3JhbSBhbmQgZGV0ZXJtaW5lIGlmIGEgc3BlY2lmaWMgYWN0aW9uIGlzIGFsbG93ZWQKLy8gSGVyZSwgYWN0aW9uIHJlZmVycyB0byB0aGUgT25Db21wbGV0ZSBpbiBjb21iaW5hdGlvbiB3aXRoIHdoZXRoZXIgdGhlIGFwcCBpcyBiZWluZyBjcmVhdGVkIG9yIGNhbGxlZAovLyBFdmVyeSBwb3NzaWJsZSBhY3Rpb24gZm9yIHRoaXMgY29udHJhY3QgaXMgcmVwcmVzZW50ZWQgaW4gdGhlIHN3aXRjaCBzdGF0ZW1lbnQKLy8gSWYgdGhlIGFjdGlvbiBpcyBub3QgaW1wbGVtZW50ZWQgaW4gdGhlIGNvbnRyYWN0LCBpdHMgcmVzcGVjdGl2ZSBicmFuY2ggd2lsbCBiZSAiKk5PVF9JTVBMRU1FTlRFRCIgd2hpY2gganVzdCBjb250YWlucyAiZXJyIgp0eG4gQXBwbGljYXRpb25JRAohCnB1c2hpbnQgNgoqCnR4biBPbkNvbXBsZXRpb24KKwpzd2l0Y2ggKmNhbGxfTm9PcCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKmNyZWF0ZV9Ob09wICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRAoKKk5PVF9JTVBMRU1FTlRFRDoKCS8vIFRoZSByZXF1ZXN0ZWQgYWN0aW9uIGlzIG5vdCBpbXBsZW1lbnRlZCBpbiB0aGlzIGNvbnRyYWN0LiBBcmUgeW91IHVzaW5nIHRoZSBjb3JyZWN0IE9uQ29tcGxldGU/IERpZCB5b3Ugc2V0IHlvdXIgYXBwIElEPwoJZXJyCgovLyBpc3N1ZUJvdW50eShwYXksdWludDY0LGFkZHJlc3Mpdm9pZAoqYWJpX3JvdXRlX2lzc3VlQm91bnR5OgoJLy8gYWRkcjogYWRkcmVzcwoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgoJZHVwCglsZW4KCXB1c2hpbnQgMzIKCT09CgoJLy8gYXJndW1lbnQgMCAoYWRkcikgZm9yIGlzc3VlQm91bnR5IG11c3QgYmUgYSBhZGRyZXNzCglhc3NlcnQKCgkvLyBhbW91bnQ6IHVpbnQ2NAoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQoJYnRvaQoKCS8vIHBheVR4bjogcGF5Cgl0eG4gR3JvdXBJbmRleAoJaW50YyAwIC8vIDEKCS0KCWR1cAoJZ3R4bnMgVHlwZUVudW0KCWludGMgMCAvLyAgcGF5Cgk9PQoKCS8vIGFyZ3VtZW50IDIgKHBheVR4bikgZm9yIGlzc3VlQm91bnR5IG11c3QgYmUgYSBwYXkgdHJhbnNhY3Rpb24KCWFzc2VydAoKCS8vIGV4ZWN1dGUgaXNzdWVCb3VudHkocGF5LHVpbnQ2NCxhZGRyZXNzKXZvaWQKCWNhbGxzdWIgaXNzdWVCb3VudHkKCWludGMgMCAvLyAxCglyZXR1cm4KCi8vIGlzc3VlQm91bnR5KHBheVR4bjogUGF5VHhuLCBhbW91bnQ6IHVpbnQ2NCwgYWRkcjogQWRkcmVzcyk6IHZvaWQKaXNzdWVCb3VudHk6Cglwcm90byAzIDAKCgkvLyBQdXNoIGVtcHR5IGJ5dGVzIGFmdGVyIHRoZSBmcmFtZSBwb2ludGVyIHRvIHJlc2VydmUgc3BhY2UgZm9yIGxvY2FsIHZhcmlhYmxlcwoJYnl0ZWMgMCAvLyAweAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoxMQoJLy8gYXNzZXJ0KGFtb3VudCA+IDAsICdhbW91bnQgbXVzdCBiZSBncmVhdGVyIHRoYW4gemVybycpCglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCWludGMgMSAvLyAwCgk+CgoJLy8gYW1vdW50IG11c3QgYmUgZ3JlYXRlciB0aGFuIHplcm8KCWFzc2VydAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoxMwoJLy8gdG90YWxDb3N0ID0gTUJSICsgQ09TVF9QRVJfQk9YICsgQ09TVF9QRVJfQllURSAqICg4ICsgNjQpCglpbnRjIDIgLy8gMTMxMzAwCglmcmFtZV9idXJ5IDAgLy8gdG90YWxDb3N0OiB1aW50NjQKCgkvLyAqaWYwX2NvbmRpdGlvbgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjE1CgkvLyB0aGlzLmJvdW50eUJveChhZGRyKS5leGlzdHMKCWZyYW1lX2RpZyAtMyAvLyBhZGRyOiBBZGRyZXNzCglib3hfbGVuCglzd2FwCglwb3AKCWJ6ICppZjBfZWxzZQoKCS8vICppZjBfY29uc2VxdWVudAoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjE2CgkvLyB2ZXJpZnlQYXlUeG4ocGF5VHhuLCB7CgkvLyAgICAgICAgIHNlbmRlcjogdGhpcy50eG4uc2VuZGVyLAoJLy8gICAgICAgICByZWNlaXZlcjogdGhpcy5hcHAuYWRkcmVzcywKCS8vICAgICAgICAgYW1vdW50OiBhbW91bnQsCgkvLyAgICAgICB9KQoJLy8gdmVyaWZ5IHNlbmRlcgoJZnJhbWVfZGlnIC0xIC8vIHBheVR4bjogUGF5VHhuCglndHhucyBTZW5kZXIKCXR4biBTZW5kZXIKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6InNlbmRlciIsImV4cGVjdGVkIjoidGhpcy50eG4uc2VuZGVyIn0KCWFzc2VydAoKCS8vIHZlcmlmeSByZWNlaXZlcgoJZnJhbWVfZGlnIC0xIC8vIHBheVR4bjogUGF5VHhuCglndHhucyBSZWNlaXZlcgoJZ2xvYmFsIEN1cnJlbnRBcHBsaWNhdGlvbkFkZHJlc3MKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6InJlY2VpdmVyIiwiZXhwZWN0ZWQiOiJ0aGlzLmFwcC5hZGRyZXNzIn0KCWFzc2VydAoKCS8vIHZlcmlmeSBhbW91bnQKCWZyYW1lX2RpZyAtMSAvLyBwYXlUeG46IFBheVR4bgoJZ3R4bnMgQW1vdW50CglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6ImFtb3VudCIsImV4cGVjdGVkIjoiYW1vdW50In0KCWFzc2VydAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoyMgoJLy8gdGhpcy5ib3VudHlCb3goYWRkcikudmFsdWUgPSB0aGlzLmJvdW50eUJveChhZGRyKS52YWx1ZSArIGFtb3VudAoJZnJhbWVfZGlnIC0zIC8vIGFkZHI6IEFkZHJlc3MKCWZyYW1lX2RpZyAtMyAvLyBhZGRyOiBBZGRyZXNzCglib3hfZ2V0CgoJLy8gYm94IHZhbHVlIGRvZXMgbm90IGV4aXN0OiB0aGlzLmJvdW50eUJveChhZGRyKS52YWx1ZQoJYXNzZXJ0CglidG9pCglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCSsKCWl0b2IKCWJveF9wdXQKCWIgKmlmMF9lbmQKCippZjBfZWxzZToKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoyNAoJLy8gdmVyaWZ5UGF5VHhuKHBheVR4biwgewoJLy8gICAgICAgICBzZW5kZXI6IHRoaXMudHhuLnNlbmRlciwKCS8vICAgICAgICAgcmVjZWl2ZXI6IHRoaXMuYXBwLmFkZHJlc3MsCgkvLyAgICAgICAgIGFtb3VudDogdG90YWxDb3N0ICsgYW1vdW50LAoJLy8gICAgICAgfSkKCS8vIHZlcmlmeSBzZW5kZXIKCWZyYW1lX2RpZyAtMSAvLyBwYXlUeG46IFBheVR4bgoJZ3R4bnMgU2VuZGVyCgl0eG4gU2VuZGVyCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoicGF5VHhuIiwiZmllbGQiOiJzZW5kZXIiLCJleHBlY3RlZCI6InRoaXMudHhuLnNlbmRlciJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgcmVjZWl2ZXIKCWZyYW1lX2RpZyAtMSAvLyBwYXlUeG46IFBheVR4bgoJZ3R4bnMgUmVjZWl2ZXIKCWdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoicGF5VHhuIiwiZmllbGQiOiJyZWNlaXZlciIsImV4cGVjdGVkIjoidGhpcy5hcHAuYWRkcmVzcyJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgYW1vdW50CglmcmFtZV9kaWcgLTEgLy8gcGF5VHhuOiBQYXlUeG4KCWd0eG5zIEFtb3VudAoJaW50YyAyIC8vICB0b3RhbENvc3Q6IHVpbnQ2NAoJZnJhbWVfZGlnIC0yIC8vIGFtb3VudDogdWludDY0CgkrCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoicGF5VHhuIiwiZmllbGQiOiJhbW91bnQiLCJleHBlY3RlZCI6InRvdGFsQ29zdCArIGFtb3VudCJ9Cglhc3NlcnQKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6MzAKCS8vIHRoaXMuYm91bnR5Qm94KGFkZHIpLnZhbHVlID0gYW1vdW50CglmcmFtZV9kaWcgLTMgLy8gYWRkcjogQWRkcmVzcwoJZnJhbWVfZGlnIC0yIC8vIGFtb3VudDogdWludDY0CglpdG9iCglib3hfcHV0CgoqaWYwX2VuZDoKCXJldHN1YgoKLy8gY2xhaW0oKXZvaWQKKmFiaV9yb3V0ZV9jbGFpbToKCS8vIGV4ZWN1dGUgY2xhaW0oKXZvaWQKCWNhbGxzdWIgY2xhaW0KCWludGMgMCAvLyAxCglyZXR1cm4KCi8vIGNsYWltKCk6IHZvaWQKY2xhaW06Cglwcm90byAwIDAKCgkvLyBQdXNoIGVtcHR5IGJ5dGVzIGFmdGVyIHRoZSBmcmFtZSBwb2ludGVyIHRvIHJlc2VydmUgc3BhY2UgZm9yIGxvY2FsIHZhcmlhYmxlcwoJYnl0ZWMgMCAvLyAweAoJZHVwCgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjM1CgkvLyBhZGRyID0gdGhpcy50eG4uc2VuZGVyCgl0eG4gU2VuZGVyCglmcmFtZV9idXJ5IDAgLy8gYWRkcjogYWRkcmVzcwoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czozNgoJLy8gYXNzZXJ0KHRoaXMuYm91bnR5Qm94KGFkZHIpLmV4aXN0cywgJ1NvcnJ5LCB5b3UgaGF2ZSBubyBib3VudHkgdG8gY2xhaW0nKQoJZnJhbWVfZGlnIDAgLy8gYWRkcjogYWRkcmVzcwoJYm94X2xlbgoJc3dhcAoJcG9wCgoJLy8gU29ycnksIHlvdSBoYXZlIG5vIGJvdW50eSB0byBjbGFpbQoJYXNzZXJ0CgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjM4CgkvLyBhbW91bnQgPSB0aGlzLmJvdW50eUJveChhZGRyKS52YWx1ZQoJZnJhbWVfZGlnIDAgLy8gYWRkcjogYWRkcmVzcwoJYm94X2dldAoKCS8vIGJveCB2YWx1ZSBkb2VzIG5vdCBleGlzdDogdGhpcy5ib3VudHlCb3goYWRkcikudmFsdWUKCWFzc2VydAoJYnRvaQoJZnJhbWVfYnVyeSAxIC8vIGFtb3VudDogdWludDY0CgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjQwCgkvLyBhc3NlcnQoYW1vdW50ID4gMCwgJ05vIGJvdW50eSBhdmFpbGFibGUgdG8gY2xhaW0nKQoJZnJhbWVfZGlnIDEgLy8gYW1vdW50OiB1aW50NjQKCWludGMgMSAvLyAwCgk+CgoJLy8gTm8gYm91bnR5IGF2YWlsYWJsZSB0byBjbGFpbQoJYXNzZXJ0CgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjQyCgkvLyBzZW5kUGF5bWVudCh7CgkvLyAgICAgICBhbW91bnQ6IGFtb3VudCwKCS8vICAgICAgIHNlbmRlcjogdGhpcy5hcHAuYWRkcmVzcywKCS8vICAgICAgIHJlY2VpdmVyOiB0aGlzLnR4bi5zZW5kZXIsCgkvLyAgICAgICBub3RlOiAnQm91bnR5IGNsYWltZWQnLAoJLy8gICAgIH0pCglpdHhuX2JlZ2luCglpbnRjIDAgLy8gIHBheQoJaXR4bl9maWVsZCBUeXBlRW51bQoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czo0MwoJLy8gYW1vdW50OiBhbW91bnQKCWZyYW1lX2RpZyAxIC8vIGFtb3VudDogdWludDY0CglpdHhuX2ZpZWxkIEFtb3VudAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czo0NAoJLy8gc2VuZGVyOiB0aGlzLmFwcC5hZGRyZXNzCglnbG9iYWwgQ3VycmVudEFwcGxpY2F0aW9uQWRkcmVzcwoJaXR4bl9maWVsZCBTZW5kZXIKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6NDUKCS8vIHJlY2VpdmVyOiB0aGlzLnR4bi5zZW5kZXIKCXR4biBTZW5kZXIKCWl0eG5fZmllbGQgUmVjZWl2ZXIKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6NDYKCS8vIG5vdGU6ICdCb3VudHkgY2xhaW1lZCcKCXB1c2hieXRlcyAweDQyNmY3NTZlNzQ3OTIwNjM2YzYxNjk2ZDY1NjQgLy8gIkJvdW50eSBjbGFpbWVkIgoJaXR4bl9maWVsZCBOb3RlCgoJLy8gRmVlIGZpZWxkIG5vdCBzZXQsIGRlZmF1bHRpbmcgdG8gMAoJaW50YyAxIC8vIDAKCWl0eG5fZmllbGQgRmVlCgoJLy8gU3VibWl0IGlubmVyIHRyYW5zYWN0aW9uCglpdHhuX3N1Ym1pdAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czo0OQoJLy8gdGhpcy5ib3VudHlCb3goYWRkcikudmFsdWUgPSAwCglmcmFtZV9kaWcgMCAvLyBhZGRyOiBhZGRyZXNzCglwdXNoYnl0ZXMgMHgwMDAwMDAwMDAwMDAwMDAwCglib3hfcHV0CglyZXRzdWIKCiphYmlfcm91dGVfY3JlYXRlQXBwbGljYXRpb246CglpbnRjIDAgLy8gMQoJcmV0dXJuCgoqY3JlYXRlX05vT3A6CglwdXNoYnl0ZXMgMHhiODQ0N2IzNiAvLyBtZXRob2QgImNyZWF0ZUFwcGxpY2F0aW9uKCl2b2lkIgoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMAoJbWF0Y2ggKmFiaV9yb3V0ZV9jcmVhdGVBcHBsaWNhdGlvbgoKCS8vIHRoaXMgY29udHJhY3QgZG9lcyBub3QgaW1wbGVtZW50IHRoZSBnaXZlbiBBQkkgbWV0aG9kIGZvciBjcmVhdGUgTm9PcAoJZXJyCgoqY2FsbF9Ob09wOgoJcHVzaGJ5dGVzIDB4Zjg5ZTA0OTcgLy8gbWV0aG9kICJpc3N1ZUJvdW50eShwYXksdWludDY0LGFkZHJlc3Mpdm9pZCIKCXB1c2hieXRlcyAweGYxNTc3NzI2IC8vIG1ldGhvZCAiY2xhaW0oKXZvaWQiCgl0eG5hIEFwcGxpY2F0aW9uQXJncyAwCgltYXRjaCAqYWJpX3JvdXRlX2lzc3VlQm91bnR5ICphYmlfcm91dGVfY2xhaW0KCgkvLyB0aGlzIGNvbnRyYWN0IGRvZXMgbm90IGltcGxlbWVudCB0aGUgZ2l2ZW4gQUJJIG1ldGhvZCBmb3IgY2FsbCBOb09wCgllcnI=","clear":"I3ByYWdtYSB2ZXJzaW9uIDEw"},"bareActions":{"create":[],"call":[]}} as unknown as Arc56Contract
 
 /**
  * A state record containing binary data
@@ -76,6 +76,7 @@ export type BountyArgs = {
       amount: bigint | number
       addr: string
     }
+    'claim()void': Record<string, never>
     'createApplication()void': Record<string, never>
   }
   /**
@@ -83,6 +84,7 @@ export type BountyArgs = {
    */
   tuple: {
     'issueBounty(pay,uint64,address)void': [payTxn: AppMethodCallTransactionArgument, amount: bigint | number, addr: string]
+    'claim()void': []
     'createApplication()void': []
   }
 }
@@ -92,6 +94,7 @@ export type BountyArgs = {
  */
 export type BountyReturns = {
   'issueBounty(pay,uint64,address)void': void
+  'claim()void': void
   'createApplication()void': void
 }
 
@@ -108,22 +111,16 @@ export type BountyTypes = {
       argsTuple: BountyArgs['tuple']['issueBounty(pay,uint64,address)void']
       returns: BountyReturns['issueBounty(pay,uint64,address)void']
     }>
+    & Record<'claim()void' | 'claim', {
+      argsObj: BountyArgs['obj']['claim()void']
+      argsTuple: BountyArgs['tuple']['claim()void']
+      returns: BountyReturns['claim()void']
+    }>
     & Record<'createApplication()void' | 'createApplication', {
       argsObj: BountyArgs['obj']['createApplication()void']
       argsTuple: BountyArgs['tuple']['createApplication()void']
       returns: BountyReturns['createApplication()void']
     }>
-  /**
-   * Defines the shape of the state of the application.
-   */
-  state: {
-    box: {
-      keys: {}
-      maps: {
-        bountyBox: Map<string, bigint>
-      }
-    }
-  }
 }
 
 /**
@@ -152,11 +149,6 @@ export type MethodArgs<TSignature extends BountySignatures> = BountyTypes['metho
  * Maps a method signature from the Bounty smart contract to the method's return type
  */
 export type MethodReturn<TSignature extends BountySignatures> = BountyTypes['methods'][TSignature]['returns']
-
-/**
- * Defines the shape of the keyed box state of the application.
- */
-export type BoxKeysState = BountyTypes['state']['box']['keys']
 
 
 /**
@@ -221,6 +213,19 @@ export abstract class BountyParamsFactory {
       ...params,
       method: 'issueBounty(pay,uint64,address)void' as const,
       args: Array.isArray(params.args) ? params.args : [params.args.payTxn, params.args.amount, params.args.addr],
+    }
+  }
+  /**
+   * Constructs a no op call for the claim()void ABI method
+   *
+   * @param params Parameters for the call
+   * @returns An `AppClientMethodCallParams` object for the call
+   */
+  static claim(params: CallParams<BountyArgs['obj']['claim()void'] | BountyArgs['tuple']['claim()void']> & CallOnComplete): AppClientMethodCallParams & CallOnComplete {
+    return {
+      ...params,
+      method: 'claim()void' as const,
+      args: Array.isArray(params.args) ? params.args : [],
     }
   }
 }
@@ -474,6 +479,16 @@ export class BountyClient {
       return this.appClient.params.call(BountyParamsFactory.issueBounty(params))
     },
 
+    /**
+     * Makes a call to the Bounty smart contract using the `claim()void` ABI method.
+     *
+     * @param params The params for the smart contract call
+     * @returns The call params
+     */
+    claim: (params: CallParams<BountyArgs['obj']['claim()void'] | BountyArgs['tuple']['claim()void']> & {onComplete?: OnApplicationComplete.NoOpOC} = {args: []}) => {
+      return this.appClient.params.call(BountyParamsFactory.claim(params))
+    },
+
   }
 
   /**
@@ -498,6 +513,16 @@ export class BountyClient {
      */
     issueBounty: (params: CallParams<BountyArgs['obj']['issueBounty(pay,uint64,address)void'] | BountyArgs['tuple']['issueBounty(pay,uint64,address)void']> & {onComplete?: OnApplicationComplete.NoOpOC}) => {
       return this.appClient.createTransaction.call(BountyParamsFactory.issueBounty(params))
+    },
+
+    /**
+     * Makes a call to the Bounty smart contract using the `claim()void` ABI method.
+     *
+     * @param params The params for the smart contract call
+     * @returns The call transaction
+     */
+    claim: (params: CallParams<BountyArgs['obj']['claim()void'] | BountyArgs['tuple']['claim()void']> & {onComplete?: OnApplicationComplete.NoOpOC} = {args: []}) => {
+      return this.appClient.createTransaction.call(BountyParamsFactory.claim(params))
     },
 
   }
@@ -527,6 +552,17 @@ export class BountyClient {
       return {...result, return: result.return as unknown as (undefined | BountyReturns['issueBounty(pay,uint64,address)void'])}
     },
 
+    /**
+     * Makes a call to the Bounty smart contract using the `claim()void` ABI method.
+     *
+     * @param params The params for the smart contract call
+     * @returns The call result
+     */
+    claim: async (params: CallParams<BountyArgs['obj']['claim()void'] | BountyArgs['tuple']['claim()void']> & SendParams & {onComplete?: OnApplicationComplete.NoOpOC} = {args: []}) => {
+      const result = await this.appClient.send.call(BountyParamsFactory.claim(params))
+      return {...result, return: result.return as unknown as (undefined | BountyReturns['claim()void'])}
+    },
+
   }
 
   /**
@@ -543,32 +579,6 @@ export class BountyClient {
    * Methods to access state for the current Bounty app
    */
   state = {
-    /**
-     * Methods to access box state for the current Bounty app
-     */
-    box: {
-      /**
-       * Get all current keyed values from box state
-       */
-      getAll: async (): Promise<Partial<Expand<BoxKeysState>>> => {
-        const result = await this.appClient.state.box.getAll()
-        return {
-        }
-      },
-      /**
-       * Get values from the bountyBox map in box state
-       */
-      bountyBox: {
-        /**
-         * Get all current values of the bountyBox map in box state
-         */
-        getMap: async (): Promise<Map<string, bigint>> => { return (await this.appClient.state.box.getMap("bountyBox")) as Map<string, bigint> },
-        /**
-         * Get a current value of the bountyBox map by key from box state
-         */
-        value: async (key: string): Promise<bigint | undefined> => { return await this.appClient.state.box.getMapValue("bountyBox", key) as bigint | undefined },
-      },
-    },
   }
 
   public newGroup(): BountyComposer {
@@ -582,6 +592,14 @@ export class BountyClient {
        */
       issueBounty(params: CallParams<BountyArgs['obj']['issueBounty(pay,uint64,address)void'] | BountyArgs['tuple']['issueBounty(pay,uint64,address)void']> & {onComplete?: OnApplicationComplete.NoOpOC}) {
         promiseChain = promiseChain.then(async () => composer.addAppCallMethodCall(await client.params.issueBounty(params)))
+        resultMappers.push(undefined)
+        return this
+      },
+      /**
+       * Add a claim()void method call against the Bounty contract
+       */
+      claim(params: CallParams<BountyArgs['obj']['claim()void'] | BountyArgs['tuple']['claim()void']> & {onComplete?: OnApplicationComplete.NoOpOC}) {
+        promiseChain = promiseChain.then(async () => composer.addAppCallMethodCall(await client.params.claim(params)))
         resultMappers.push(undefined)
         return this
       },
@@ -628,6 +646,15 @@ export type BountyComposer<TReturns extends [...any[]] = []> = {
    * @returns The typed transaction composer so you can fluently chain multiple calls or call execute to execute all queued up transactions
    */
   issueBounty(params?: CallParams<BountyArgs['obj']['issueBounty(pay,uint64,address)void'] | BountyArgs['tuple']['issueBounty(pay,uint64,address)void']>): BountyComposer<[...TReturns, BountyReturns['issueBounty(pay,uint64,address)void'] | undefined]>
+
+  /**
+   * Calls the claim()void ABI method.
+   *
+   * @param args The arguments for the contract call
+   * @param params Any additional parameters for the call
+   * @returns The typed transaction composer so you can fluently chain multiple calls or call execute to execute all queued up transactions
+   */
+  claim(params?: CallParams<BountyArgs['obj']['claim()void'] | BountyArgs['tuple']['claim()void']>): BountyComposer<[...TReturns, BountyReturns['claim()void'] | undefined]>
 
   /**
    * Makes a clear_state call to an existing instance of the Bounty smart contract.

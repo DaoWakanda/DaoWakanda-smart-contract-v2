@@ -18,7 +18,7 @@ export class Bounty extends Contract {
         receiver: this.app.address,
         amount: amount,
       });
-  
+
       this.bountyBox(addr).value = this.bountyBox(addr).value + amount;
     } else {
       verifyPayTxn(payTxn, {
@@ -26,8 +26,26 @@ export class Bounty extends Contract {
         receiver: this.app.address,
         amount: totalCost + amount,
       });
-  
+
       this.bountyBox(addr).value = amount;
     }
+  }
+
+  claim() {
+    const addr = this.txn.sender;
+    assert(this.bountyBox(addr).exists, 'Sorry, you have no bounty to claim');
+
+    const amount = this.bountyBox(addr).value;
+
+    assert(amount > 0, 'No bounty available to claim');
+
+    sendPayment({
+      amount: amount,
+      sender: this.app.address,
+      receiver: this.txn.sender,
+      note: 'Bounty claimed',
+    });
+
+    this.bountyBox(addr).value = 0;
   }
 }
