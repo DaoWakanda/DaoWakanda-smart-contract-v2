@@ -149,4 +149,32 @@ describe('Bounty', () => {
 
     // expect(response.confirmation).toBeDefined();
   });
+
+  test('claim when no bounty', async () => {
+    const { algorand } = fixture;
+    const suggestedParams = await algokit.getTransactionParams(undefined, fixture.algorand.client.algod);
+  
+    const paymentTxn = makePaymentTxnWithSuggestedParamsFromObject({
+      from: claimer.addr,
+      to: appClient.appClient.appAddress,
+      amount: 0,
+      suggestedParams,
+    });
+  
+
+    await expect(appClient.send.claimBounty({
+      args: { payTxn: paymentTxn },
+      sender: claimer.addr,
+      signer: makeBasicAccountTransactionSigner(claimer),
+      boxReferences: [
+        {
+          appId: appClient.appId,
+          name: claimer.addr,
+        },
+      ],
+      extraFee: algokit.algos(0.002),
+    })).rejects.toBeDefined();
+  });
+  
+
 });
