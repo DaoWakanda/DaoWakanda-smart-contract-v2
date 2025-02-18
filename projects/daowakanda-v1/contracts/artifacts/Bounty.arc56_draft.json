@@ -681,10 +681,10 @@
   "compilerInfo": {
     "compiler": "algod",
     "compilerVersion": {
-      "major": 3,
-      "minor": 25,
-      "patch": 0,
-      "commitHash": "9855f57c"
+      "major": 4,
+      "minor": 0,
+      "patch": 1,
+      "commitHash": "63d271cf"
     }
   }
 }
