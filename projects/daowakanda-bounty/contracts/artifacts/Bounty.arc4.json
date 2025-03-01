@@ -26,8 +26,8 @@
       "name": "claimBounty",
       "args": [
         {
-          "name": "payTxn",
-          "type": "pay"
+          "name": "amount",
+          "type": "uint64"
         }
       ],
       "returns": {

@@ -722,34 +722,22 @@
     "source": "contracts/Bounty.algo.ts:34",
     "pc": [
       167,
-      168
+      168,
+      169
     ]
   },
   {
     "teal": 189,
     "source": "contracts/Bounty.algo.ts:34",
     "pc": [
-      169
-    ]
-  },
-  {
-    "teal": 190,
-    "source": "contracts/Bounty.algo.ts:34",
-    "pc": [
       170
-    ]
-  },
-  {
-    "teal": 191,
-    "source": "contracts/Bounty.algo.ts:34",
-    "pc": [
-      171
     ]
   },
   {
     "teal": 192,
     "source": "contracts/Bounty.algo.ts:34",
     "pc": [
+      171,
       172,
       173
     ]
@@ -769,178 +757,170 @@
     ]
   },
   {
-    "teal": 197,
-    "source": "contracts/Bounty.algo.ts:34",
-    "errorMessage": "argument 0 (payTxn) for claimBounty must be a pay transaction",
-    "pc": [
-      176
-    ]
-  },
-  {
-    "teal": 200,
+    "teal": 198,
     "source": "contracts/Bounty.algo.ts:34",
     "pc": [
+      176,
       177,
-      178,
-      179
+      178
     ]
   },
   {
     "teal": 201,
     "source": "contracts/Bounty.algo.ts:34",
     "pc": [
-      180
+      179
     ]
   },
   {
     "teal": 202,
     "source": "contracts/Bounty.algo.ts:34",
     "pc": [
-      181
+      180
     ]
   },
   {
     "teal": 206,
-    "source": "contracts/Bounty.algo.ts:34",
+    "source": "contracts/Bounty.algo.ts:35",
     "pc": [
-      182,
+      181,
+      182
+    ]
+  },
+  {
+    "teal": 207,
+    "source": "contracts/Bounty.algo.ts:35",
+    "pc": [
       183,
       184
     ]
   },
   {
-    "teal": 209,
-    "source": "contracts/Bounty.algo.ts:34",
+    "teal": 211,
+    "source": "contracts/Bounty.algo.ts:36",
     "pc": [
-      185
-    ]
-  },
-  {
-    "teal": 210,
-    "source": "contracts/Bounty.algo.ts:34",
-    "pc": [
+      185,
       186
     ]
   },
   {
-    "teal": 214,
-    "source": "contracts/Bounty.algo.ts:35",
+    "teal": 212,
+    "source": "contracts/Bounty.algo.ts:36",
     "pc": [
-      187,
+      187
+    ]
+  },
+  {
+    "teal": 213,
+    "source": "contracts/Bounty.algo.ts:36",
+    "pc": [
       188
     ]
   },
   {
-    "teal": 215,
-    "source": "contracts/Bounty.algo.ts:35",
+    "teal": 214,
+    "source": "contracts/Bounty.algo.ts:36",
     "pc": [
-      189,
+      189
+    ]
+  },
+  {
+    "teal": 217,
+    "source": "contracts/Bounty.algo.ts:36",
+    "errorMessage": "Sorry, you have no bounty to claim",
+    "pc": [
       190
     ]
   },
   {
-    "teal": 216,
-    "source": "contracts/Bounty.algo.ts:35",
+    "teal": 221,
+    "source": "contracts/Bounty.algo.ts:37",
     "pc": [
       191,
       192
     ]
   },
   {
-    "teal": 220,
-    "source": "contracts/Bounty.algo.ts:36",
+    "teal": 222,
+    "source": "contracts/Bounty.algo.ts:37",
     "pc": [
-      193,
+      193
+    ]
+  },
+  {
+    "teal": 223,
+    "source": "contracts/Bounty.algo.ts:37",
+    "pc": [
       194
     ]
   },
   {
-    "teal": 221,
-    "source": "contracts/Bounty.algo.ts:36",
+    "teal": 226,
+    "source": "contracts/Bounty.algo.ts:37",
+    "errorMessage": "Invalid bounty amount",
     "pc": [
       195
     ]
   },
   {
-    "teal": 222,
-    "source": "contracts/Bounty.algo.ts:36",
+    "teal": 230,
+    "source": "contracts/Bounty.algo.ts:39",
     "pc": [
-      196
-    ]
-  },
-  {
-    "teal": 223,
-    "source": "contracts/Bounty.algo.ts:36",
-    "pc": [
+      196,
       197
     ]
   },
   {
-    "teal": 226,
-    "source": "contracts/Bounty.algo.ts:36",
-    "errorMessage": "Sorry, you have no bounty to claim",
+    "teal": 231,
+    "source": "contracts/Bounty.algo.ts:39",
     "pc": [
       198
     ]
   },
   {
-    "teal": 230,
-    "source": "contracts/Bounty.algo.ts:38",
-    "pc": [
-      199,
-      200
-    ]
-  },
-  {
-    "teal": 231,
-    "source": "contracts/Bounty.algo.ts:38",
-    "pc": [
-      201
-    ]
-  },
-  {
     "teal": 234,
-    "source": "contracts/Bounty.algo.ts:38",
+    "source": "contracts/Bounty.algo.ts:39",
     "errorMessage": "box value does not exist: this.bountyBox(addr).value",
     "pc": [
-      202
+      199
     ]
   },
   {
     "teal": 235,
-    "source": "contracts/Bounty.algo.ts:38",
+    "source": "contracts/Bounty.algo.ts:39",
     "pc": [
-      203
+      200
     ]
   },
   {
     "teal": 236,
-    "source": "contracts/Bounty.algo.ts:38",
+    "source": "contracts/Bounty.algo.ts:39",
     "pc": [
-      204,
-      205
+      201,
+      202
     ]
   },
   {
     "teal": 240,
     "source": "contracts/Bounty.algo.ts:40",
     "pc": [
-      206,
-      207
+      203,
+      204
     ]
   },
   {
     "teal": 241,
     "source": "contracts/Bounty.algo.ts:40",
     "pc": [
-      208
+      205,
+      206
     ]
   },
   {
     "teal": 242,
     "source": "contracts/Bounty.algo.ts:40",
     "pc": [
-      209
+      207
     ]
   },
   {
@@ -948,33 +928,41 @@
     "source": "contracts/Bounty.algo.ts:40",
     "errorMessage": "No bounty available to claim",
     "pc": [
-      210
+      208
     ]
   },
   {
     "teal": 254,
     "source": "contracts/Bounty.algo.ts:42",
     "pc": [
-      211
+      209
     ]
   },
   {
     "teal": 255,
     "source": "contracts/Bounty.algo.ts:42",
     "pc": [
-      212
+      210
     ]
   },
   {
     "teal": 256,
     "source": "contracts/Bounty.algo.ts:42",
     "pc": [
+      211,
+      212
+    ]
+  },
+  {
+    "teal": 260,
+    "source": "contracts/Bounty.algo.ts:43",
+    "pc": [
       213,
       214
     ]
   },
   {
-    "teal": 260,
+    "teal": 261,
     "source": "contracts/Bounty.algo.ts:43",
     "pc": [
       215,
@@ -982,15 +970,15 @@
     ]
   },
   {
-    "teal": 261,
-    "source": "contracts/Bounty.algo.ts:43",
+    "teal": 265,
+    "source": "contracts/Bounty.algo.ts:44",
     "pc": [
       217,
       218
     ]
   },
   {
-    "teal": 265,
+    "teal": 266,
     "source": "contracts/Bounty.algo.ts:44",
     "pc": [
       219,
@@ -998,15 +986,15 @@
     ]
   },
   {
-    "teal": 266,
-    "source": "contracts/Bounty.algo.ts:44",
+    "teal": 270,
+    "source": "contracts/Bounty.algo.ts:45",
     "pc": [
       221,
       222
     ]
   },
   {
-    "teal": 270,
+    "teal": 271,
     "source": "contracts/Bounty.algo.ts:45",
     "pc": [
       223,
@@ -1014,17 +1002,11 @@
     ]
   },
   {
-    "teal": 271,
-    "source": "contracts/Bounty.algo.ts:45",
-    "pc": [
-      225,
-      226
-    ]
-  },
-  {
     "teal": 275,
     "source": "contracts/Bounty.algo.ts:46",
     "pc": [
+      225,
+      226,
       227,
       228,
       229,
@@ -1038,43 +1020,49 @@
       237,
       238,
       239,
-      240,
-      241,
-      242
+      240
     ]
   },
   {
     "teal": 276,
     "source": "contracts/Bounty.algo.ts:46",
     "pc": [
-      243,
-      244
+      241,
+      242
     ]
   },
   {
     "teal": 279,
     "source": "contracts/Bounty.algo.ts:42",
     "pc": [
-      245
+      243
     ]
   },
   {
     "teal": 280,
     "source": "contracts/Bounty.algo.ts:42",
     "pc": [
-      246,
-      247
+      244,
+      245
     ]
   },
   {
     "teal": 283,
     "source": "contracts/Bounty.algo.ts:42",
     "pc": [
-      248
+      246
     ]
   },
   {
     "teal": 287,
+    "source": "contracts/Bounty.algo.ts:49",
+    "pc": [
+      247,
+      248
+    ]
+  },
+  {
+    "teal": 288,
     "source": "contracts/Bounty.algo.ts:49",
     "pc": [
       249,
@@ -1082,90 +1070,108 @@
     ]
   },
   {
-    "teal": 288,
-    "source": "contracts/Bounty.algo.ts:49",
-    "pc": [
-      251,
-      252,
-      253,
-      254,
-      255,
-      256,
-      257,
-      258,
-      259,
-      260
-    ]
-  },
-  {
     "teal": 289,
     "source": "contracts/Bounty.algo.ts:49",
     "pc": [
-      261
+      251,
+      252
     ]
   },
   {
     "teal": 290,
-    "source": "contracts/Bounty.algo.ts:34",
+    "source": "contracts/Bounty.algo.ts:49",
     "pc": [
-      262
+      253
+    ]
+  },
+  {
+    "teal": 291,
+    "source": "contracts/Bounty.algo.ts:49",
+    "pc": [
+      254
+    ]
+  },
+  {
+    "teal": 292,
+    "source": "contracts/Bounty.algo.ts:49",
+    "pc": [
+      255
     ]
   },
   {
     "teal": 293,
-    "source": "contracts/Bounty.algo.ts:7",
+    "source": "contracts/Bounty.algo.ts:34",
     "pc": [
-      263
+      256
     ]
   },
   {
-    "teal": 294,
+    "teal": 296,
     "source": "contracts/Bounty.algo.ts:7",
     "pc": [
-      264
+      257
     ]
   },
   {
     "teal": 297,
     "source": "contracts/Bounty.algo.ts:7",
     "pc": [
+      258
+    ]
+  },
+  {
+    "teal": 300,
+    "source": "contracts/Bounty.algo.ts:7",
+    "pc": [
+      259,
+      260,
+      261,
+      262,
+      263,
+      264
+    ]
+  },
+  {
+    "teal": 301,
+    "source": "contracts/Bounty.algo.ts:7",
+    "pc": [
       265,
       266,
-      267,
-      268,
-      269,
-      270
-    ]
-  },
-  {
-    "teal": 298,
-    "source": "contracts/Bounty.algo.ts:7",
-    "pc": [
-      271,
-      272,
-      273
-    ]
-  },
-  {
-    "teal": 299,
-    "source": "contracts/Bounty.algo.ts:7",
-    "pc": [
-      274,
-      275,
-      276,
-      277
+      267
     ]
   },
   {
     "teal": 302,
     "source": "contracts/Bounty.algo.ts:7",
-    "errorMessage": "this contract does not implement the given ABI method for create NoOp",
     "pc": [
-      278
+      268,
+      269,
+      270,
+      271
     ]
   },
   {
     "teal": 305,
+    "source": "contracts/Bounty.algo.ts:7",
+    "errorMessage": "this contract does not implement the given ABI method for create NoOp",
+    "pc": [
+      272
+    ]
+  },
+  {
+    "teal": 308,
+    "source": "contracts/Bounty.algo.ts:7",
+    "pc": [
+      273,
+      274,
+      275,
+      276,
+      277,
+      278
+    ]
+  },
+  {
+    "teal": 309,
     "source": "contracts/Bounty.algo.ts:7",
     "pc": [
       279,
@@ -1177,44 +1183,32 @@
     ]
   },
   {
-    "teal": 306,
+    "teal": 310,
     "source": "contracts/Bounty.algo.ts:7",
     "pc": [
       285,
       286,
-      287,
-      288,
-      289,
-      290
+      287
     ]
   },
   {
-    "teal": 307,
+    "teal": 311,
     "source": "contracts/Bounty.algo.ts:7",
     "pc": [
+      288,
+      289,
+      290,
       291,
       292,
       293
     ]
   },
   {
-    "teal": 308,
-    "source": "contracts/Bounty.algo.ts:7",
-    "pc": [
-      294,
-      295,
-      296,
-      297,
-      298,
-      299
-    ]
-  },
-  {
-    "teal": 311,
+    "teal": 314,
     "source": "contracts/Bounty.algo.ts:7",
     "errorMessage": "this contract does not implement the given ABI method for call NoOp",
     "pc": [
-      300
+      294
     ]
   }
 ]

@@ -32,8 +32,8 @@
       "name": "claimBounty",
       "args": [
         {
-          "name": "payTxn",
-          "type": "pay"
+          "name": "amount",
+          "type": "uint64"
         }
       ],
       "returns": {
@@ -822,34 +822,22 @@
           "source": "contracts/Bounty.algo.ts:34",
           "pc": [
             167,
-            168
+            168,
+            169
           ]
         },
         {
           "teal": 189,
           "source": "contracts/Bounty.algo.ts:34",
           "pc": [
-            169
-          ]
-        },
-        {
-          "teal": 190,
-          "source": "contracts/Bounty.algo.ts:34",
-          "pc": [
             170
-          ]
-        },
-        {
-          "teal": 191,
-          "source": "contracts/Bounty.algo.ts:34",
-          "pc": [
-            171
           ]
         },
         {
           "teal": 192,
           "source": "contracts/Bounty.algo.ts:34",
           "pc": [
+            171,
             172,
             173
           ]
@@ -869,178 +857,170 @@
           ]
         },
         {
-          "teal": 197,
-          "source": "contracts/Bounty.algo.ts:34",
-          "errorMessage": "argument 0 (payTxn) for claimBounty must be a pay transaction",
-          "pc": [
-            176
-          ]
-        },
-        {
-          "teal": 200,
+          "teal": 198,
           "source": "contracts/Bounty.algo.ts:34",
           "pc": [
+            176,
             177,
-            178,
-            179
+            178
           ]
         },
         {
           "teal": 201,
           "source": "contracts/Bounty.algo.ts:34",
           "pc": [
-            180
+            179
           ]
         },
         {
           "teal": 202,
           "source": "contracts/Bounty.algo.ts:34",
           "pc": [
-            181
+            180
           ]
         },
         {
           "teal": 206,
-          "source": "contracts/Bounty.algo.ts:34",
+          "source": "contracts/Bounty.algo.ts:35",
           "pc": [
-            182,
+            181,
+            182
+          ]
+        },
+        {
+          "teal": 207,
+          "source": "contracts/Bounty.algo.ts:35",
+          "pc": [
             183,
             184
           ]
         },
         {
-          "teal": 209,
-          "source": "contracts/Bounty.algo.ts:34",
+          "teal": 211,
+          "source": "contracts/Bounty.algo.ts:36",
           "pc": [
-            185
-          ]
-        },
-        {
-          "teal": 210,
-          "source": "contracts/Bounty.algo.ts:34",
-          "pc": [
+            185,
             186
           ]
         },
         {
-          "teal": 214,
-          "source": "contracts/Bounty.algo.ts:35",
+          "teal": 212,
+          "source": "contracts/Bounty.algo.ts:36",
           "pc": [
-            187,
+            187
+          ]
+        },
+        {
+          "teal": 213,
+          "source": "contracts/Bounty.algo.ts:36",
+          "pc": [
             188
           ]
         },
         {
-          "teal": 215,
-          "source": "contracts/Bounty.algo.ts:35",
+          "teal": 214,
+          "source": "contracts/Bounty.algo.ts:36",
           "pc": [
-            189,
+            189
+          ]
+        },
+        {
+          "teal": 217,
+          "source": "contracts/Bounty.algo.ts:36",
+          "errorMessage": "Sorry, you have no bounty to claim",
+          "pc": [
             190
           ]
         },
         {
-          "teal": 216,
-          "source": "contracts/Bounty.algo.ts:35",
+          "teal": 221,
+          "source": "contracts/Bounty.algo.ts:37",
           "pc": [
             191,
             192
           ]
         },
         {
-          "teal": 220,
-          "source": "contracts/Bounty.algo.ts:36",
+          "teal": 222,
+          "source": "contracts/Bounty.algo.ts:37",
           "pc": [
-            193,
+            193
+          ]
+        },
+        {
+          "teal": 223,
+          "source": "contracts/Bounty.algo.ts:37",
+          "pc": [
             194
           ]
         },
         {
-          "teal": 221,
-          "source": "contracts/Bounty.algo.ts:36",
+          "teal": 226,
+          "source": "contracts/Bounty.algo.ts:37",
+          "errorMessage": "Invalid bounty amount",
           "pc": [
             195
           ]
         },
         {
-          "teal": 222,
-          "source": "contracts/Bounty.algo.ts:36",
+          "teal": 230,
+          "source": "contracts/Bounty.algo.ts:39",
           "pc": [
-            196
-          ]
-        },
-        {
-          "teal": 223,
-          "source": "contracts/Bounty.algo.ts:36",
-          "pc": [
+            196,
             197
           ]
         },
         {
-          "teal": 226,
-          "source": "contracts/Bounty.algo.ts:36",
-          "errorMessage": "Sorry, you have no bounty to claim",
+          "teal": 231,
+          "source": "contracts/Bounty.algo.ts:39",
           "pc": [
             198
           ]
         },
         {
-          "teal": 230,
-          "source": "contracts/Bounty.algo.ts:38",
-          "pc": [
-            199,
-            200
-          ]
-        },
-        {
-          "teal": 231,
-          "source": "contracts/Bounty.algo.ts:38",
-          "pc": [
-            201
-          ]
-        },
-        {
           "teal": 234,
-          "source": "contracts/Bounty.algo.ts:38",
+          "source": "contracts/Bounty.algo.ts:39",
           "errorMessage": "box value does not exist: this.bountyBox(addr).value",
           "pc": [
-            202
+            199
           ]
         },
         {
           "teal": 235,
-          "source": "contracts/Bounty.algo.ts:38",
+          "source": "contracts/Bounty.algo.ts:39",
           "pc": [
-            203
+            200
           ]
         },
         {
           "teal": 236,
-          "source": "contracts/Bounty.algo.ts:38",
+          "source": "contracts/Bounty.algo.ts:39",
           "pc": [
-            204,
-            205
+            201,
+            202
           ]
         },
         {
           "teal": 240,
           "source": "contracts/Bounty.algo.ts:40",
           "pc": [
-            206,
-            207
+            203,
+            204
           ]
         },
         {
           "teal": 241,
           "source": "contracts/Bounty.algo.ts:40",
           "pc": [
-            208
+            205,
+            206
           ]
         },
         {
           "teal": 242,
           "source": "contracts/Bounty.algo.ts:40",
           "pc": [
-            209
+            207
           ]
         },
         {
@@ -1048,33 +1028,41 @@
           "source": "contracts/Bounty.algo.ts:40",
           "errorMessage": "No bounty available to claim",
           "pc": [
-            210
+            208
           ]
         },
         {
           "teal": 254,
           "source": "contracts/Bounty.algo.ts:42",
           "pc": [
-            211
+            209
           ]
         },
         {
           "teal": 255,
           "source": "contracts/Bounty.algo.ts:42",
           "pc": [
-            212
+            210
           ]
         },
         {
           "teal": 256,
           "source": "contracts/Bounty.algo.ts:42",
           "pc": [
+            211,
+            212
+          ]
+        },
+        {
+          "teal": 260,
+          "source": "contracts/Bounty.algo.ts:43",
+          "pc": [
             213,
             214
           ]
         },
         {
-          "teal": 260,
+          "teal": 261,
           "source": "contracts/Bounty.algo.ts:43",
           "pc": [
             215,
@@ -1082,15 +1070,15 @@
           ]
         },
         {
-          "teal": 261,
-          "source": "contracts/Bounty.algo.ts:43",
+          "teal": 265,
+          "source": "contracts/Bounty.algo.ts:44",
           "pc": [
             217,
             218
           ]
         },
         {
-          "teal": 265,
+          "teal": 266,
           "source": "contracts/Bounty.algo.ts:44",
           "pc": [
             219,
@@ -1098,15 +1086,15 @@
           ]
         },
         {
-          "teal": 266,
-          "source": "contracts/Bounty.algo.ts:44",
+          "teal": 270,
+          "source": "contracts/Bounty.algo.ts:45",
           "pc": [
             221,
             222
           ]
         },
         {
-          "teal": 270,
+          "teal": 271,
           "source": "contracts/Bounty.algo.ts:45",
           "pc": [
             223,
@@ -1114,17 +1102,11 @@
           ]
         },
         {
-          "teal": 271,
-          "source": "contracts/Bounty.algo.ts:45",
-          "pc": [
-            225,
-            226
-          ]
-        },
-        {
           "teal": 275,
           "source": "contracts/Bounty.algo.ts:46",
           "pc": [
+            225,
+            226,
             227,
             228,
             229,
@@ -1138,43 +1120,49 @@
             237,
             238,
             239,
-            240,
-            241,
-            242
+            240
           ]
         },
         {
           "teal": 276,
           "source": "contracts/Bounty.algo.ts:46",
           "pc": [
-            243,
-            244
+            241,
+            242
           ]
         },
         {
           "teal": 279,
           "source": "contracts/Bounty.algo.ts:42",
           "pc": [
-            245
+            243
           ]
         },
         {
           "teal": 280,
           "source": "contracts/Bounty.algo.ts:42",
           "pc": [
-            246,
-            247
+            244,
+            245
           ]
         },
         {
           "teal": 283,
           "source": "contracts/Bounty.algo.ts:42",
           "pc": [
-            248
+            246
           ]
         },
         {
           "teal": 287,
+          "source": "contracts/Bounty.algo.ts:49",
+          "pc": [
+            247,
+            248
+          ]
+        },
+        {
+          "teal": 288,
           "source": "contracts/Bounty.algo.ts:49",
           "pc": [
             249,
@@ -1182,90 +1170,108 @@
           ]
         },
         {
-          "teal": 288,
-          "source": "contracts/Bounty.algo.ts:49",
-          "pc": [
-            251,
-            252,
-            253,
-            254,
-            255,
-            256,
-            257,
-            258,
-            259,
-            260
-          ]
-        },
-        {
           "teal": 289,
           "source": "contracts/Bounty.algo.ts:49",
           "pc": [
-            261
+            251,
+            252
           ]
         },
         {
           "teal": 290,
-          "source": "contracts/Bounty.algo.ts:34",
+          "source": "contracts/Bounty.algo.ts:49",
           "pc": [
-            262
+            253
+          ]
+        },
+        {
+          "teal": 291,
+          "source": "contracts/Bounty.algo.ts:49",
+          "pc": [
+            254
+          ]
+        },
+        {
+          "teal": 292,
+          "source": "contracts/Bounty.algo.ts:49",
+          "pc": [
+            255
           ]
         },
         {
           "teal": 293,
-          "source": "contracts/Bounty.algo.ts:7",
+          "source": "contracts/Bounty.algo.ts:34",
           "pc": [
-            263
+            256
           ]
         },
         {
-          "teal": 294,
+          "teal": 296,
           "source": "contracts/Bounty.algo.ts:7",
           "pc": [
-            264
+            257
           ]
         },
         {
           "teal": 297,
           "source": "contracts/Bounty.algo.ts:7",
           "pc": [
+            258
+          ]
+        },
+        {
+          "teal": 300,
+          "source": "contracts/Bounty.algo.ts:7",
+          "pc": [
+            259,
+            260,
+            261,
+            262,
+            263,
+            264
+          ]
+        },
+        {
+          "teal": 301,
+          "source": "contracts/Bounty.algo.ts:7",
+          "pc": [
             265,
             266,
-            267,
-            268,
-            269,
-            270
-          ]
-        },
-        {
-          "teal": 298,
-          "source": "contracts/Bounty.algo.ts:7",
-          "pc": [
-            271,
-            272,
-            273
-          ]
-        },
-        {
-          "teal": 299,
-          "source": "contracts/Bounty.algo.ts:7",
-          "pc": [
-            274,
-            275,
-            276,
-            277
+            267
           ]
         },
         {
           "teal": 302,
           "source": "contracts/Bounty.algo.ts:7",
-          "errorMessage": "this contract does not implement the given ABI method for create NoOp",
           "pc": [
-            278
+            268,
+            269,
+            270,
+            271
           ]
         },
         {
           "teal": 305,
+          "source": "contracts/Bounty.algo.ts:7",
+          "errorMessage": "this contract does not implement the given ABI method for create NoOp",
+          "pc": [
+            272
+          ]
+        },
+        {
+          "teal": 308,
+          "source": "contracts/Bounty.algo.ts:7",
+          "pc": [
+            273,
+            274,
+            275,
+            276,
+            277,
+            278
+          ]
+        },
+        {
+          "teal": 309,
           "source": "contracts/Bounty.algo.ts:7",
           "pc": [
             279,
@@ -1277,44 +1283,32 @@
           ]
         },
         {
-          "teal": 306,
+          "teal": 310,
           "source": "contracts/Bounty.algo.ts:7",
           "pc": [
             285,
             286,
-            287,
-            288,
-            289,
-            290
+            287
           ]
         },
         {
-          "teal": 307,
+          "teal": 311,
           "source": "contracts/Bounty.algo.ts:7",
           "pc": [
+            288,
+            289,
+            290,
             291,
             292,
             293
           ]
         },
         {
-          "teal": 308,
-          "source": "contracts/Bounty.algo.ts:7",
-          "pc": [
-            294,
-            295,
-            296,
-            297,
-            298,
-            299
-          ]
-        },
-        {
-          "teal": 311,
+          "teal": 314,
           "source": "contracts/Bounty.algo.ts:7",
           "errorMessage": "this contract does not implement the given ABI method for call NoOp",
           "pc": [
-            300
+            294
           ]
         }
       ],
@@ -1326,11 +1320,11 @@
     }
   },
   "source": {
-    "approval": "I3ByYWdtYSB2ZXJzaW9uIDEwCmludGNibG9jayAxIDAgMTMxMzAwCmJ5dGVjYmxvY2sgMHgKCi8vIFRoaXMgVEVBTCB3YXMgZ2VuZXJhdGVkIGJ5IFRFQUxTY3JpcHQgdjAuMTA2LjIKLy8gaHR0cHM6Ly9naXRodWIuY29tL2FsZ29yYW5kZm91bmRhdGlvbi9URUFMU2NyaXB0CgovLyBUaGlzIGNvbnRyYWN0IGlzIGNvbXBsaWFudCB3aXRoIGFuZC9vciBpbXBsZW1lbnRzIHRoZSBmb2xsb3dpbmcgQVJDczogWyBBUkM0IF0KCi8vIFRoZSBmb2xsb3dpbmcgdGVuIGxpbmVzIG9mIFRFQUwgaGFuZGxlIGluaXRpYWwgcHJvZ3JhbSBmbG93Ci8vIFRoaXMgcGF0dGVybiBpcyB1c2VkIHRvIG1ha2UgaXQgZWFzeSBmb3IgYW55b25lIHRvIHBhcnNlIHRoZSBzdGFydCBvZiB0aGUgcHJvZ3JhbSBhbmQgZGV0ZXJtaW5lIGlmIGEgc3BlY2lmaWMgYWN0aW9uIGlzIGFsbG93ZWQKLy8gSGVyZSwgYWN0aW9uIHJlZmVycyB0byB0aGUgT25Db21wbGV0ZSBpbiBjb21iaW5hdGlvbiB3aXRoIHdoZXRoZXIgdGhlIGFwcCBpcyBiZWluZyBjcmVhdGVkIG9yIGNhbGxlZAovLyBFdmVyeSBwb3NzaWJsZSBhY3Rpb24gZm9yIHRoaXMgY29udHJhY3QgaXMgcmVwcmVzZW50ZWQgaW4gdGhlIHN3aXRjaCBzdGF0ZW1lbnQKLy8gSWYgdGhlIGFjdGlvbiBpcyBub3QgaW1wbGVtZW50ZWQgaW4gdGhlIGNvbnRyYWN0LCBpdHMgcmVzcGVjdGl2ZSBicmFuY2ggd2lsbCBiZSAiKk5PVF9JTVBMRU1FTlRFRCIgd2hpY2gganVzdCBjb250YWlucyAiZXJyIgp0eG4gQXBwbGljYXRpb25JRAohCnB1c2hpbnQgNgoqCnR4biBPbkNvbXBsZXRpb24KKwpzd2l0Y2ggKmNhbGxfTm9PcCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKmNyZWF0ZV9Ob09wICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRAoKKk5PVF9JTVBMRU1FTlRFRDoKCS8vIFRoZSByZXF1ZXN0ZWQgYWN0aW9uIGlzIG5vdCBpbXBsZW1lbnRlZCBpbiB0aGlzIGNvbnRyYWN0LiBBcmUgeW91IHVzaW5nIHRoZSBjb3JyZWN0IE9uQ29tcGxldGU/IERpZCB5b3Ugc2V0IHlvdXIgYXBwIElEPwoJZXJyCgovLyBpc3N1ZUJvdW50eShwYXksdWludDY0LGFkZHJlc3Mpdm9pZAoqYWJpX3JvdXRlX2lzc3VlQm91bnR5OgoJLy8gYWRkcjogYWRkcmVzcwoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgoJZHVwCglsZW4KCXB1c2hpbnQgMzIKCT09CgoJLy8gYXJndW1lbnQgMCAoYWRkcikgZm9yIGlzc3VlQm91bnR5IG11c3QgYmUgYSBhZGRyZXNzCglhc3NlcnQKCgkvLyBhbW91bnQ6IHVpbnQ2NAoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQoJYnRvaQoKCS8vIHBheVR4bjogcGF5Cgl0eG4gR3JvdXBJbmRleAoJaW50YyAwIC8vIDEKCS0KCWR1cAoJZ3R4bnMgVHlwZUVudW0KCWludGMgMCAvLyAgcGF5Cgk9PQoKCS8vIGFyZ3VtZW50IDIgKHBheVR4bikgZm9yIGlzc3VlQm91bnR5IG11c3QgYmUgYSBwYXkgdHJhbnNhY3Rpb24KCWFzc2VydAoKCS8vIGV4ZWN1dGUgaXNzdWVCb3VudHkocGF5LHVpbnQ2NCxhZGRyZXNzKXZvaWQKCWNhbGxzdWIgaXNzdWVCb3VudHkKCWludGMgMCAvLyAxCglyZXR1cm4KCi8vIGlzc3VlQm91bnR5KHBheVR4bjogUGF5VHhuLCBhbW91bnQ6IHVpbnQ2NCwgYWRkcjogQWRkcmVzcyk6IHZvaWQKaXNzdWVCb3VudHk6Cglwcm90byAzIDAKCgkvLyBQdXNoIGVtcHR5IGJ5dGVzIGFmdGVyIHRoZSBmcmFtZSBwb2ludGVyIHRvIHJlc2VydmUgc3BhY2UgZm9yIGxvY2FsIHZhcmlhYmxlcwoJYnl0ZWMgMCAvLyAweAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoxMQoJLy8gYXNzZXJ0KGFtb3VudCA+IDAsICdhbW91bnQgbXVzdCBiZSBncmVhdGVyIHRoYW4gemVybycpCglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCWludGMgMSAvLyAwCgk+CgoJLy8gYW1vdW50IG11c3QgYmUgZ3JlYXRlciB0aGFuIHplcm8KCWFzc2VydAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoxMwoJLy8gdG90YWxDb3N0ID0gTUJSICsgQ09TVF9QRVJfQk9YICsgQ09TVF9QRVJfQllURSAqICg4ICsgNjQpCglpbnRjIDIgLy8gMTMxMzAwCglmcmFtZV9idXJ5IDAgLy8gdG90YWxDb3N0OiB1aW50NjQKCgkvLyAqaWYwX2NvbmRpdGlvbgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjE1CgkvLyB0aGlzLmJvdW50eUJveChhZGRyKS5leGlzdHMKCWZyYW1lX2RpZyAtMyAvLyBhZGRyOiBBZGRyZXNzCglib3hfbGVuCglzd2FwCglwb3AKCWJ6ICppZjBfZWxzZQoKCS8vICppZjBfY29uc2VxdWVudAoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjE2CgkvLyB2ZXJpZnlQYXlUeG4ocGF5VHhuLCB7CgkvLyAgICAgICAgIHNlbmRlcjogdGhpcy50eG4uc2VuZGVyLAoJLy8gICAgICAgICByZWNlaXZlcjogdGhpcy5hcHAuYWRkcmVzcywKCS8vICAgICAgICAgYW1vdW50OiBhbW91bnQsCgkvLyAgICAgICB9KQoJLy8gdmVyaWZ5IHNlbmRlcgoJZnJhbWVfZGlnIC0xIC8vIHBheVR4bjogUGF5VHhuCglndHhucyBTZW5kZXIKCXR4biBTZW5kZXIKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6InNlbmRlciIsImV4cGVjdGVkIjoidGhpcy50eG4uc2VuZGVyIn0KCWFzc2VydAoKCS8vIHZlcmlmeSByZWNlaXZlcgoJZnJhbWVfZGlnIC0xIC8vIHBheVR4bjogUGF5VHhuCglndHhucyBSZWNlaXZlcgoJZ2xvYmFsIEN1cnJlbnRBcHBsaWNhdGlvbkFkZHJlc3MKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6InJlY2VpdmVyIiwiZXhwZWN0ZWQiOiJ0aGlzLmFwcC5hZGRyZXNzIn0KCWFzc2VydAoKCS8vIHZlcmlmeSBhbW91bnQKCWZyYW1lX2RpZyAtMSAvLyBwYXlUeG46IFBheVR4bgoJZ3R4bnMgQW1vdW50CglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6ImFtb3VudCIsImV4cGVjdGVkIjoiYW1vdW50In0KCWFzc2VydAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoyMgoJLy8gdGhpcy5ib3VudHlCb3goYWRkcikudmFsdWUgPSB0aGlzLmJvdW50eUJveChhZGRyKS52YWx1ZSArIGFtb3VudAoJZnJhbWVfZGlnIC0zIC8vIGFkZHI6IEFkZHJlc3MKCWZyYW1lX2RpZyAtMyAvLyBhZGRyOiBBZGRyZXNzCglib3hfZ2V0CgoJLy8gYm94IHZhbHVlIGRvZXMgbm90IGV4aXN0OiB0aGlzLmJvdW50eUJveChhZGRyKS52YWx1ZQoJYXNzZXJ0CglidG9pCglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCSsKCWl0b2IKCWJveF9wdXQKCWIgKmlmMF9lbmQKCippZjBfZWxzZToKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoyNAoJLy8gdmVyaWZ5UGF5VHhuKHBheVR4biwgewoJLy8gICAgICAgICBzZW5kZXI6IHRoaXMudHhuLnNlbmRlciwKCS8vICAgICAgICAgcmVjZWl2ZXI6IHRoaXMuYXBwLmFkZHJlc3MsCgkvLyAgICAgICAgIGFtb3VudDogdG90YWxDb3N0ICsgYW1vdW50LAoJLy8gICAgICAgfSkKCS8vIHZlcmlmeSBzZW5kZXIKCWZyYW1lX2RpZyAtMSAvLyBwYXlUeG46IFBheVR4bgoJZ3R4bnMgU2VuZGVyCgl0eG4gU2VuZGVyCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoicGF5VHhuIiwiZmllbGQiOiJzZW5kZXIiLCJleHBlY3RlZCI6InRoaXMudHhuLnNlbmRlciJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgcmVjZWl2ZXIKCWZyYW1lX2RpZyAtMSAvLyBwYXlUeG46IFBheVR4bgoJZ3R4bnMgUmVjZWl2ZXIKCWdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoicGF5VHhuIiwiZmllbGQiOiJyZWNlaXZlciIsImV4cGVjdGVkIjoidGhpcy5hcHAuYWRkcmVzcyJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgYW1vdW50CglmcmFtZV9kaWcgLTEgLy8gcGF5VHhuOiBQYXlUeG4KCWd0eG5zIEFtb3VudAoJaW50YyAyIC8vICB0b3RhbENvc3Q6IHVpbnQ2NAoJZnJhbWVfZGlnIC0yIC8vIGFtb3VudDogdWludDY0CgkrCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoicGF5VHhuIiwiZmllbGQiOiJhbW91bnQiLCJleHBlY3RlZCI6InRvdGFsQ29zdCArIGFtb3VudCJ9Cglhc3NlcnQKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6MzAKCS8vIHRoaXMuYm91bnR5Qm94KGFkZHIpLnZhbHVlID0gYW1vdW50CglmcmFtZV9kaWcgLTMgLy8gYWRkcjogQWRkcmVzcwoJZnJhbWVfZGlnIC0yIC8vIGFtb3VudDogdWludDY0CglpdG9iCglib3hfcHV0CgoqaWYwX2VuZDoKCXJldHN1YgoKLy8gY2xhaW1Cb3VudHkocGF5KXZvaWQKKmFiaV9yb3V0ZV9jbGFpbUJvdW50eToKCS8vIHBheVR4bjogcGF5Cgl0eG4gR3JvdXBJbmRleAoJaW50YyAwIC8vIDEKCS0KCWR1cAoJZ3R4bnMgVHlwZUVudW0KCWludGMgMCAvLyAgcGF5Cgk9PQoKCS8vIGFyZ3VtZW50IDAgKHBheVR4bikgZm9yIGNsYWltQm91bnR5IG11c3QgYmUgYSBwYXkgdHJhbnNhY3Rpb24KCWFzc2VydAoKCS8vIGV4ZWN1dGUgY2xhaW1Cb3VudHkocGF5KXZvaWQKCWNhbGxzdWIgY2xhaW1Cb3VudHkKCWludGMgMCAvLyAxCglyZXR1cm4KCi8vIGNsYWltQm91bnR5KHBheVR4bjogUGF5VHhuKTogdm9pZApjbGFpbUJvdW50eToKCXByb3RvIDEgMAoKCS8vIFB1c2ggZW1wdHkgYnl0ZXMgYWZ0ZXIgdGhlIGZyYW1lIHBvaW50ZXIgdG8gcmVzZXJ2ZSBzcGFjZSBmb3IgbG9jYWwgdmFyaWFibGVzCglieXRlYyAwIC8vIDB4CglkdXAKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6MzUKCS8vIGFkZHIgPSBwYXlUeG4uc2VuZGVyCglmcmFtZV9kaWcgLTEgLy8gcGF5VHhuOiBQYXlUeG4KCWd0eG5zIFNlbmRlcgoJZnJhbWVfYnVyeSAwIC8vIGFkZHI6IGFkZHJlc3MKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6MzYKCS8vIGFzc2VydCh0aGlzLmJvdW50eUJveChhZGRyKS5leGlzdHMsICdTb3JyeSwgeW91IGhhdmUgbm8gYm91bnR5IHRvIGNsYWltJykKCWZyYW1lX2RpZyAwIC8vIGFkZHI6IGFkZHJlc3MKCWJveF9sZW4KCXN3YXAKCXBvcAoKCS8vIFNvcnJ5LCB5b3UgaGF2ZSBubyBib3VudHkgdG8gY2xhaW0KCWFzc2VydAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czozOAoJLy8gYW1vdW50ID0gdGhpcy5ib3VudHlCb3goYWRkcikudmFsdWUKCWZyYW1lX2RpZyAwIC8vIGFkZHI6IGFkZHJlc3MKCWJveF9nZXQKCgkvLyBib3ggdmFsdWUgZG9lcyBub3QgZXhpc3Q6IHRoaXMuYm91bnR5Qm94KGFkZHIpLnZhbHVlCglhc3NlcnQKCWJ0b2kKCWZyYW1lX2J1cnkgMSAvLyBhbW91bnQ6IHVpbnQ2NAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czo0MAoJLy8gYXNzZXJ0KGFtb3VudCA+IDAsICdObyBib3VudHkgYXZhaWxhYmxlIHRvIGNsYWltJykKCWZyYW1lX2RpZyAxIC8vIGFtb3VudDogdWludDY0CglpbnRjIDEgLy8gMAoJPgoKCS8vIE5vIGJvdW50eSBhdmFpbGFibGUgdG8gY2xhaW0KCWFzc2VydAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czo0MgoJLy8gc2VuZFBheW1lbnQoewoJLy8gICAgICAgYW1vdW50OiBhbW91bnQsCgkvLyAgICAgICBzZW5kZXI6IHRoaXMuYXBwLmFkZHJlc3MsCgkvLyAgICAgICByZWNlaXZlcjogdGhpcy50eG4uc2VuZGVyLAoJLy8gICAgICAgbm90ZTogJ0JvdW50eSBjbGFpbWVkJywKCS8vICAgICB9KQoJaXR4bl9iZWdpbgoJaW50YyAwIC8vICBwYXkKCWl0eG5fZmllbGQgVHlwZUVudW0KCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6NDMKCS8vIGFtb3VudDogYW1vdW50CglmcmFtZV9kaWcgMSAvLyBhbW91bnQ6IHVpbnQ2NAoJaXR4bl9maWVsZCBBbW91bnQKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6NDQKCS8vIHNlbmRlcjogdGhpcy5hcHAuYWRkcmVzcwoJZ2xvYmFsIEN1cnJlbnRBcHBsaWNhdGlvbkFkZHJlc3MKCWl0eG5fZmllbGQgU2VuZGVyCgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjQ1CgkvLyByZWNlaXZlcjogdGhpcy50eG4uc2VuZGVyCgl0eG4gU2VuZGVyCglpdHhuX2ZpZWxkIFJlY2VpdmVyCgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjQ2CgkvLyBub3RlOiAnQm91bnR5IGNsYWltZWQnCglwdXNoYnl0ZXMgMHg0MjZmNzU2ZTc0NzkyMDYzNmM2MTY5NmQ2NTY0IC8vICJCb3VudHkgY2xhaW1lZCIKCWl0eG5fZmllbGQgTm90ZQoKCS8vIEZlZSBmaWVsZCBub3Qgc2V0LCBkZWZhdWx0aW5nIHRvIDAKCWludGMgMSAvLyAwCglpdHhuX2ZpZWxkIEZlZQoKCS8vIFN1Ym1pdCBpbm5lciB0cmFuc2FjdGlvbgoJaXR4bl9zdWJtaXQKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6NDkKCS8vIHRoaXMuYm91bnR5Qm94KGFkZHIpLnZhbHVlID0gMAoJZnJhbWVfZGlnIDAgLy8gYWRkcjogYWRkcmVzcwoJcHVzaGJ5dGVzIDB4MDAwMDAwMDAwMDAwMDAwMAoJYm94X3B1dAoJcmV0c3ViCgoqYWJpX3JvdXRlX2NyZWF0ZUFwcGxpY2F0aW9uOgoJaW50YyAwIC8vIDEKCXJldHVybgoKKmNyZWF0ZV9Ob09wOgoJcHVzaGJ5dGVzIDB4Yjg0NDdiMzYgLy8gbWV0aG9kICJjcmVhdGVBcHBsaWNhdGlvbigpdm9pZCIKCXR4bmEgQXBwbGljYXRpb25BcmdzIDAKCW1hdGNoICphYmlfcm91dGVfY3JlYXRlQXBwbGljYXRpb24KCgkvLyB0aGlzIGNvbnRyYWN0IGRvZXMgbm90IGltcGxlbWVudCB0aGUgZ2l2ZW4gQUJJIG1ldGhvZCBmb3IgY3JlYXRlIE5vT3AKCWVycgoKKmNhbGxfTm9PcDoKCXB1c2hieXRlcyAweGY4OWUwNDk3IC8vIG1ldGhvZCAiaXNzdWVCb3VudHkocGF5LHVpbnQ2NCxhZGRyZXNzKXZvaWQiCglwdXNoYnl0ZXMgMHhkMjc2MmVjYSAvLyBtZXRob2QgImNsYWltQm91bnR5KHBheSl2b2lkIgoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMAoJbWF0Y2ggKmFiaV9yb3V0ZV9pc3N1ZUJvdW50eSAqYWJpX3JvdXRlX2NsYWltQm91bnR5CgoJLy8gdGhpcyBjb250cmFjdCBkb2VzIG5vdCBpbXBsZW1lbnQgdGhlIGdpdmVuIEFCSSBtZXRob2QgZm9yIGNhbGwgTm9PcAoJZXJy",
+    "approval": "I3ByYWdtYSB2ZXJzaW9uIDEwCmludGNibG9jayAxIDAgMTMxMzAwCmJ5dGVjYmxvY2sgMHgKCi8vIFRoaXMgVEVBTCB3YXMgZ2VuZXJhdGVkIGJ5IFRFQUxTY3JpcHQgdjAuMTA2LjIKLy8gaHR0cHM6Ly9naXRodWIuY29tL2FsZ29yYW5kZm91bmRhdGlvbi9URUFMU2NyaXB0CgovLyBUaGlzIGNvbnRyYWN0IGlzIGNvbXBsaWFudCB3aXRoIGFuZC9vciBpbXBsZW1lbnRzIHRoZSBmb2xsb3dpbmcgQVJDczogWyBBUkM0IF0KCi8vIFRoZSBmb2xsb3dpbmcgdGVuIGxpbmVzIG9mIFRFQUwgaGFuZGxlIGluaXRpYWwgcHJvZ3JhbSBmbG93Ci8vIFRoaXMgcGF0dGVybiBpcyB1c2VkIHRvIG1ha2UgaXQgZWFzeSBmb3IgYW55b25lIHRvIHBhcnNlIHRoZSBzdGFydCBvZiB0aGUgcHJvZ3JhbSBhbmQgZGV0ZXJtaW5lIGlmIGEgc3BlY2lmaWMgYWN0aW9uIGlzIGFsbG93ZWQKLy8gSGVyZSwgYWN0aW9uIHJlZmVycyB0byB0aGUgT25Db21wbGV0ZSBpbiBjb21iaW5hdGlvbiB3aXRoIHdoZXRoZXIgdGhlIGFwcCBpcyBiZWluZyBjcmVhdGVkIG9yIGNhbGxlZAovLyBFdmVyeSBwb3NzaWJsZSBhY3Rpb24gZm9yIHRoaXMgY29udHJhY3QgaXMgcmVwcmVzZW50ZWQgaW4gdGhlIHN3aXRjaCBzdGF0ZW1lbnQKLy8gSWYgdGhlIGFjdGlvbiBpcyBub3QgaW1wbGVtZW50ZWQgaW4gdGhlIGNvbnRyYWN0LCBpdHMgcmVzcGVjdGl2ZSBicmFuY2ggd2lsbCBiZSAiKk5PVF9JTVBMRU1FTlRFRCIgd2hpY2gganVzdCBjb250YWlucyAiZXJyIgp0eG4gQXBwbGljYXRpb25JRAohCnB1c2hpbnQgNgoqCnR4biBPbkNvbXBsZXRpb24KKwpzd2l0Y2ggKmNhbGxfTm9PcCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKmNyZWF0ZV9Ob09wICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRAoKKk5PVF9JTVBMRU1FTlRFRDoKCS8vIFRoZSByZXF1ZXN0ZWQgYWN0aW9uIGlzIG5vdCBpbXBsZW1lbnRlZCBpbiB0aGlzIGNvbnRyYWN0LiBBcmUgeW91IHVzaW5nIHRoZSBjb3JyZWN0IE9uQ29tcGxldGU/IERpZCB5b3Ugc2V0IHlvdXIgYXBwIElEPwoJZXJyCgovLyBpc3N1ZUJvdW50eShwYXksdWludDY0LGFkZHJlc3Mpdm9pZAoqYWJpX3JvdXRlX2lzc3VlQm91bnR5OgoJLy8gYWRkcjogYWRkcmVzcwoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgoJZHVwCglsZW4KCXB1c2hpbnQgMzIKCT09CgoJLy8gYXJndW1lbnQgMCAoYWRkcikgZm9yIGlzc3VlQm91bnR5IG11c3QgYmUgYSBhZGRyZXNzCglhc3NlcnQKCgkvLyBhbW91bnQ6IHVpbnQ2NAoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQoJYnRvaQoKCS8vIHBheVR4bjogcGF5Cgl0eG4gR3JvdXBJbmRleAoJaW50YyAwIC8vIDEKCS0KCWR1cAoJZ3R4bnMgVHlwZUVudW0KCWludGMgMCAvLyAgcGF5Cgk9PQoKCS8vIGFyZ3VtZW50IDIgKHBheVR4bikgZm9yIGlzc3VlQm91bnR5IG11c3QgYmUgYSBwYXkgdHJhbnNhY3Rpb24KCWFzc2VydAoKCS8vIGV4ZWN1dGUgaXNzdWVCb3VudHkocGF5LHVpbnQ2NCxhZGRyZXNzKXZvaWQKCWNhbGxzdWIgaXNzdWVCb3VudHkKCWludGMgMCAvLyAxCglyZXR1cm4KCi8vIGlzc3VlQm91bnR5KHBheVR4bjogUGF5VHhuLCBhbW91bnQ6IHVpbnQ2NCwgYWRkcjogQWRkcmVzcyk6IHZvaWQKaXNzdWVCb3VudHk6Cglwcm90byAzIDAKCgkvLyBQdXNoIGVtcHR5IGJ5dGVzIGFmdGVyIHRoZSBmcmFtZSBwb2ludGVyIHRvIHJlc2VydmUgc3BhY2UgZm9yIGxvY2FsIHZhcmlhYmxlcwoJYnl0ZWMgMCAvLyAweAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoxMQoJLy8gYXNzZXJ0KGFtb3VudCA+IDAsICdhbW91bnQgbXVzdCBiZSBncmVhdGVyIHRoYW4gemVybycpCglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCWludGMgMSAvLyAwCgk+CgoJLy8gYW1vdW50IG11c3QgYmUgZ3JlYXRlciB0aGFuIHplcm8KCWFzc2VydAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoxMwoJLy8gdG90YWxDb3N0ID0gTUJSICsgQ09TVF9QRVJfQk9YICsgQ09TVF9QRVJfQllURSAqICg4ICsgNjQpCglpbnRjIDIgLy8gMTMxMzAwCglmcmFtZV9idXJ5IDAgLy8gdG90YWxDb3N0OiB1aW50NjQKCgkvLyAqaWYwX2NvbmRpdGlvbgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjE1CgkvLyB0aGlzLmJvdW50eUJveChhZGRyKS5leGlzdHMKCWZyYW1lX2RpZyAtMyAvLyBhZGRyOiBBZGRyZXNzCglib3hfbGVuCglzd2FwCglwb3AKCWJ6ICppZjBfZWxzZQoKCS8vICppZjBfY29uc2VxdWVudAoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjE2CgkvLyB2ZXJpZnlQYXlUeG4ocGF5VHhuLCB7CgkvLyAgICAgICAgIHNlbmRlcjogdGhpcy50eG4uc2VuZGVyLAoJLy8gICAgICAgICByZWNlaXZlcjogdGhpcy5hcHAuYWRkcmVzcywKCS8vICAgICAgICAgYW1vdW50OiBhbW91bnQsCgkvLyAgICAgICB9KQoJLy8gdmVyaWZ5IHNlbmRlcgoJZnJhbWVfZGlnIC0xIC8vIHBheVR4bjogUGF5VHhuCglndHhucyBTZW5kZXIKCXR4biBTZW5kZXIKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6InNlbmRlciIsImV4cGVjdGVkIjoidGhpcy50eG4uc2VuZGVyIn0KCWFzc2VydAoKCS8vIHZlcmlmeSByZWNlaXZlcgoJZnJhbWVfZGlnIC0xIC8vIHBheVR4bjogUGF5VHhuCglndHhucyBSZWNlaXZlcgoJZ2xvYmFsIEN1cnJlbnRBcHBsaWNhdGlvbkFkZHJlc3MKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6InJlY2VpdmVyIiwiZXhwZWN0ZWQiOiJ0aGlzLmFwcC5hZGRyZXNzIn0KCWFzc2VydAoKCS8vIHZlcmlmeSBhbW91bnQKCWZyYW1lX2RpZyAtMSAvLyBwYXlUeG46IFBheVR4bgoJZ3R4bnMgQW1vdW50CglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJwYXlUeG4iLCJmaWVsZCI6ImFtb3VudCIsImV4cGVjdGVkIjoiYW1vdW50In0KCWFzc2VydAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoyMgoJLy8gdGhpcy5ib3VudHlCb3goYWRkcikudmFsdWUgPSB0aGlzLmJvdW50eUJveChhZGRyKS52YWx1ZSArIGFtb3VudAoJZnJhbWVfZGlnIC0zIC8vIGFkZHI6IEFkZHJlc3MKCWZyYW1lX2RpZyAtMyAvLyBhZGRyOiBBZGRyZXNzCglib3hfZ2V0CgoJLy8gYm94IHZhbHVlIGRvZXMgbm90IGV4aXN0OiB0aGlzLmJvdW50eUJveChhZGRyKS52YWx1ZQoJYXNzZXJ0CglidG9pCglmcmFtZV9kaWcgLTIgLy8gYW1vdW50OiB1aW50NjQKCSsKCWl0b2IKCWJveF9wdXQKCWIgKmlmMF9lbmQKCippZjBfZWxzZToKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czoyNAoJLy8gdmVyaWZ5UGF5VHhuKHBheVR4biwgewoJLy8gICAgICAgICBzZW5kZXI6IHRoaXMudHhuLnNlbmRlciwKCS8vICAgICAgICAgcmVjZWl2ZXI6IHRoaXMuYXBwLmFkZHJlc3MsCgkvLyAgICAgICAgIGFtb3VudDogdG90YWxDb3N0ICsgYW1vdW50LAoJLy8gICAgICAgfSkKCS8vIHZlcmlmeSBzZW5kZXIKCWZyYW1lX2RpZyAtMSAvLyBwYXlUeG46IFBheVR4bgoJZ3R4bnMgU2VuZGVyCgl0eG4gU2VuZGVyCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoicGF5VHhuIiwiZmllbGQiOiJzZW5kZXIiLCJleHBlY3RlZCI6InRoaXMudHhuLnNlbmRlciJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgcmVjZWl2ZXIKCWZyYW1lX2RpZyAtMSAvLyBwYXlUeG46IFBheVR4bgoJZ3R4bnMgUmVjZWl2ZXIKCWdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoicGF5VHhuIiwiZmllbGQiOiJyZWNlaXZlciIsImV4cGVjdGVkIjoidGhpcy5hcHAuYWRkcmVzcyJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgYW1vdW50CglmcmFtZV9kaWcgLTEgLy8gcGF5VHhuOiBQYXlUeG4KCWd0eG5zIEFtb3VudAoJaW50YyAyIC8vICB0b3RhbENvc3Q6IHVpbnQ2NAoJZnJhbWVfZGlnIC0yIC8vIGFtb3VudDogdWludDY0CgkrCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoicGF5VHhuIiwiZmllbGQiOiJhbW91bnQiLCJleHBlY3RlZCI6InRvdGFsQ29zdCArIGFtb3VudCJ9Cglhc3NlcnQKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6MzAKCS8vIHRoaXMuYm91bnR5Qm94KGFkZHIpLnZhbHVlID0gYW1vdW50CglmcmFtZV9kaWcgLTMgLy8gYWRkcjogQWRkcmVzcwoJZnJhbWVfZGlnIC0yIC8vIGFtb3VudDogdWludDY0CglpdG9iCglib3hfcHV0CgoqaWYwX2VuZDoKCXJldHN1YgoKLy8gY2xhaW1Cb3VudHkodWludDY0KXZvaWQKKmFiaV9yb3V0ZV9jbGFpbUJvdW50eToKCS8vIGFtb3VudDogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAxCglidG9pCgoJLy8gZXhlY3V0ZSBjbGFpbUJvdW50eSh1aW50NjQpdm9pZAoJY2FsbHN1YiBjbGFpbUJvdW50eQoJaW50YyAwIC8vIDEKCXJldHVybgoKLy8gY2xhaW1Cb3VudHkoYW1vdW50OiB1aW50NjQpOiB2b2lkCmNsYWltQm91bnR5OgoJcHJvdG8gMSAwCgoJLy8gUHVzaCBlbXB0eSBieXRlcyBhZnRlciB0aGUgZnJhbWUgcG9pbnRlciB0byByZXNlcnZlIHNwYWNlIGZvciBsb2NhbCB2YXJpYWJsZXMKCWJ5dGVjIDAgLy8gMHgKCWR1cAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czozNQoJLy8gYWRkciA9IHRoaXMudHhuLnNlbmRlcgoJdHhuIFNlbmRlcgoJZnJhbWVfYnVyeSAwIC8vIGFkZHI6IGFkZHJlc3MKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6MzYKCS8vIGFzc2VydCh0aGlzLmJvdW50eUJveChhZGRyKS5leGlzdHMsICdTb3JyeSwgeW91IGhhdmUgbm8gYm91bnR5IHRvIGNsYWltJykKCWZyYW1lX2RpZyAwIC8vIGFkZHI6IGFkZHJlc3MKCWJveF9sZW4KCXN3YXAKCXBvcAoKCS8vIFNvcnJ5LCB5b3UgaGF2ZSBubyBib3VudHkgdG8gY2xhaW0KCWFzc2VydAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czozNwoJLy8gYXNzZXJ0KGFtb3VudCA+IDAsICdJbnZhbGlkIGJvdW50eSBhbW91bnQnKQoJZnJhbWVfZGlnIC0xIC8vIGFtb3VudDogdWludDY0CglpbnRjIDEgLy8gMAoJPgoKCS8vIEludmFsaWQgYm91bnR5IGFtb3VudAoJYXNzZXJ0CgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjM5CgkvLyB1bmNsYWltZWRBbW91bnQgPSB0aGlzLmJvdW50eUJveChhZGRyKS52YWx1ZQoJZnJhbWVfZGlnIDAgLy8gYWRkcjogYWRkcmVzcwoJYm94X2dldAoKCS8vIGJveCB2YWx1ZSBkb2VzIG5vdCBleGlzdDogdGhpcy5ib3VudHlCb3goYWRkcikudmFsdWUKCWFzc2VydAoJYnRvaQoJZnJhbWVfYnVyeSAxIC8vIHVuY2xhaW1lZEFtb3VudDogdWludDY0CgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjQwCgkvLyBhc3NlcnQodW5jbGFpbWVkQW1vdW50ID49IGFtb3VudCwgJ05vIGJvdW50eSBhdmFpbGFibGUgdG8gY2xhaW0nKQoJZnJhbWVfZGlnIDEgLy8gdW5jbGFpbWVkQW1vdW50OiB1aW50NjQKCWZyYW1lX2RpZyAtMSAvLyBhbW91bnQ6IHVpbnQ2NAoJPj0KCgkvLyBObyBib3VudHkgYXZhaWxhYmxlIHRvIGNsYWltCglhc3NlcnQKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6NDIKCS8vIHNlbmRQYXltZW50KHsKCS8vICAgICAgIGFtb3VudDogYW1vdW50LAoJLy8gICAgICAgc2VuZGVyOiB0aGlzLmFwcC5hZGRyZXNzLAoJLy8gICAgICAgcmVjZWl2ZXI6IHRoaXMudHhuLnNlbmRlciwKCS8vICAgICAgIG5vdGU6ICdCb3VudHkgY2xhaW1lZCcsCgkvLyAgICAgfSkKCWl0eG5fYmVnaW4KCWludGMgMCAvLyAgcGF5CglpdHhuX2ZpZWxkIFR5cGVFbnVtCgoJLy8gY29udHJhY3RzL0JvdW50eS5hbGdvLnRzOjQzCgkvLyBhbW91bnQ6IGFtb3VudAoJZnJhbWVfZGlnIC0xIC8vIGFtb3VudDogdWludDY0CglpdHhuX2ZpZWxkIEFtb3VudAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czo0NAoJLy8gc2VuZGVyOiB0aGlzLmFwcC5hZGRyZXNzCglnbG9iYWwgQ3VycmVudEFwcGxpY2F0aW9uQWRkcmVzcwoJaXR4bl9maWVsZCBTZW5kZXIKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6NDUKCS8vIHJlY2VpdmVyOiB0aGlzLnR4bi5zZW5kZXIKCXR4biBTZW5kZXIKCWl0eG5fZmllbGQgUmVjZWl2ZXIKCgkvLyBjb250cmFjdHMvQm91bnR5LmFsZ28udHM6NDYKCS8vIG5vdGU6ICdCb3VudHkgY2xhaW1lZCcKCXB1c2hieXRlcyAweDQyNmY3NTZlNzQ3OTIwNjM2YzYxNjk2ZDY1NjQgLy8gIkJvdW50eSBjbGFpbWVkIgoJaXR4bl9maWVsZCBOb3RlCgoJLy8gRmVlIGZpZWxkIG5vdCBzZXQsIGRlZmF1bHRpbmcgdG8gMAoJaW50YyAxIC8vIDAKCWl0eG5fZmllbGQgRmVlCgoJLy8gU3VibWl0IGlubmVyIHRyYW5zYWN0aW9uCglpdHhuX3N1Ym1pdAoKCS8vIGNvbnRyYWN0cy9Cb3VudHkuYWxnby50czo0OQoJLy8gdGhpcy5ib3VudHlCb3goYWRkcikudmFsdWUgPSB1bmNsYWltZWRBbW91bnQgLSBhbW91bnQKCWZyYW1lX2RpZyAwIC8vIGFkZHI6IGFkZHJlc3MKCWZyYW1lX2RpZyAxIC8vIHVuY2xhaW1lZEFtb3VudDogdWludDY0CglmcmFtZV9kaWcgLTEgLy8gYW1vdW50OiB1aW50NjQKCS0KCWl0b2IKCWJveF9wdXQKCXJldHN1YgoKKmFiaV9yb3V0ZV9jcmVhdGVBcHBsaWNhdGlvbjoKCWludGMgMCAvLyAxCglyZXR1cm4KCipjcmVhdGVfTm9PcDoKCXB1c2hieXRlcyAweGI4NDQ3YjM2IC8vIG1ldGhvZCAiY3JlYXRlQXBwbGljYXRpb24oKXZvaWQiCgl0eG5hIEFwcGxpY2F0aW9uQXJncyAwCgltYXRjaCAqYWJpX3JvdXRlX2NyZWF0ZUFwcGxpY2F0aW9uCgoJLy8gdGhpcyBjb250cmFjdCBkb2VzIG5vdCBpbXBsZW1lbnQgdGhlIGdpdmVuIEFCSSBtZXRob2QgZm9yIGNyZWF0ZSBOb09wCgllcnIKCipjYWxsX05vT3A6CglwdXNoYnl0ZXMgMHhmODllMDQ5NyAvLyBtZXRob2QgImlzc3VlQm91bnR5KHBheSx1aW50NjQsYWRkcmVzcyl2b2lkIgoJcHVzaGJ5dGVzIDB4N2NlYmU4MTAgLy8gbWV0aG9kICJjbGFpbUJvdW50eSh1aW50NjQpdm9pZCIKCXR4bmEgQXBwbGljYXRpb25BcmdzIDAKCW1hdGNoICphYmlfcm91dGVfaXNzdWVCb3VudHkgKmFiaV9yb3V0ZV9jbGFpbUJvdW50eQoKCS8vIHRoaXMgY29udHJhY3QgZG9lcyBub3QgaW1wbGVtZW50IHRoZSBnaXZlbiBBQkkgbWV0aG9kIGZvciBjYWxsIE5vT3AKCWVycg==",
     "clear": "I3ByYWdtYSB2ZXJzaW9uIDEw"
   },
   "byteCode": {
-    "approval": "CiADAQDkgQgmAQAxGBSBBgsxGQiNDADpAAAAAAAAAAAAAADbAAAAAAAAAAAAAAA2GgJJFYEgEkQ2GgEXMRYiCUk4ECISRIgAAiJDigMAKIv+Iw1EJIwAi/29TEhBACeL/zgAMQASRIv/OAcyChJEi/84CIv+EkSL/Yv9vkQXi/4IFr9CACCL/zgAMQASRIv/OAcyChJEi/84CCSL/ggSRIv9i/4Wv4kxFiIJSTgQIhJEiAACIkOKAQAoSYv/OACMAIsAvUxIRIsAvkQXjAGLASMNRLEishCLAbIIMgqyADEAsgeADkJvdW50eSBjbGFpbWVksgUjsgGziwCACAAAAAAAAAAAv4kiQ4AEuER7NjYaAI4B//EAgAT4ngSXgATSdi7KNhoAjgL/A/97AA==",
+    "approval": "CiADAQDkgQgmAQAxGBSBBgsxGQiNDADjAAAAAAAAAAAAAADVAAAAAAAAAAAAAAA2GgJJFYEgEkQ2GgEXMRYiCUk4ECISRIgAAiJDigMAKIv+Iw1EJIwAi/29TEhBACeL/zgAMQASRIv/OAcyChJEi/84CIv+EkSL/Yv9vkQXi/4IFr9CACCL/zgAMQASRIv/OAcyChJEi/84CCSL/ggSRIv9i/4Wv4k2GgEXiAACIkOKAQAoSTEAjACLAL1MSESL/yMNRIsAvkQXjAGLAYv/D0SxIrIQi/+yCDIKsgAxALIHgA5Cb3VudHkgY2xhaW1lZLIFI7IBs4sAiwGL/wkWv4kiQ4AEuER7NjYaAI4B//EAgAT4ngSXgAR86+gQNhoAjgL/Cf+BAA==",
     "clear": "Cg=="
   },
   "compilerInfo": {
@@ -1338,8 +1332,8 @@
     "compilerVersion": {
       "major": 4,
       "minor": 0,
-      "patch": 1,
-      "commitHash": "63d271cf"
+      "patch": 2,
+      "commitHash": "6b940281"
     }
   }
 }

@@ -31,13 +31,13 @@ export class Bounty extends Contract {
     }
   }
 
-  claimBounty(payTxn: PayTxn) {
-    const addr = payTxn.sender;
+  claimBounty(amount: uint64) {
+    const addr = this.txn.sender;
     assert(this.bountyBox(addr).exists, 'Sorry, you have no bounty to claim');
+    assert(amount > 0, 'Invalid bounty amount');
 
-    const amount = this.bountyBox(addr).value;
-
-    assert(amount > 0, 'No bounty available to claim');
+    const unclaimedAmount = this.bountyBox(addr).value;
+    assert(unclaimedAmount >= amount, 'No bounty available to claim');
 
     sendPayment({
       amount: amount,
@@ -46,6 +46,6 @@ export class Bounty extends Contract {
       note: 'Bounty claimed',
     });
 
-    this.bountyBox(addr).value = 0;
+    this.bountyBox(addr).value = unclaimedAmount - amount;
   }
 }

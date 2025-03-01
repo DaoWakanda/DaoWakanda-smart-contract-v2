@@ -121,21 +121,11 @@ describe('Bounty', () => {
     // expect(response.confirmation).toBeDefined();
   });
 
-  test('claim', async () => {
-    const { algorand } = fixture;
-    const suggestedParams = await algokit.getTransactionParams(undefined, fixture.algorand.client.algod);
-
-    const paymentTxn = makePaymentTxnWithSuggestedParamsFromObject({
-      from: claimer.addr,
-      to: appClient.appClient.appAddress,
-      amount: 0, 
-      suggestedParams,
-    });
-
+  test('claim part', async () => {
     console.debug('claimer', claimer.addr);
 
     const response = await appClient.send.claimBounty({
-      args: {payTxn: paymentTxn},
+      args: { amount: algokit.algos(10).microAlgos },
       sender: claimer.addr,
       signer: makeBasicAccountTransactionSigner(claimer),
       boxReferences: [
@@ -144,26 +134,34 @@ describe('Bounty', () => {
           name: claimer.addr,
         },
       ],
-      extraFee: algokit.algos(0.002),
+      extraFee: algokit.microAlgos(1000),
     });
 
-    // expect(response.confirmation).toBeDefined();
+    expect(response.txIds).toBeDefined();
+  });
+
+  test('claim remaining', async () => {
+    console.debug('claimer', claimer.addr);
+
+    const response = await appClient.send.claimBounty({
+      args: { amount: algokit.algos(5).microAlgos },
+      sender: claimer.addr,
+      signer: makeBasicAccountTransactionSigner(claimer),
+      boxReferences: [
+        {
+          appId: appClient.appId,
+          name: claimer.addr,
+        },
+      ],
+      extraFee: algokit.microAlgos(1000),
+    });
+
+    expect(response.txIds).toBeDefined();
   });
 
   test('claim when no bounty', async () => {
-    const { algorand } = fixture;
-    const suggestedParams = await algokit.getTransactionParams(undefined, fixture.algorand.client.algod);
-  
-    const paymentTxn = makePaymentTxnWithSuggestedParamsFromObject({
-      from: claimer.addr,
-      to: appClient.appClient.appAddress,
-      amount: 0,
-      suggestedParams,
-    });
-  
-
     await expect(appClient.send.claimBounty({
-      args: { payTxn: paymentTxn },
+      args: { amount: algokit.algos(10).microAlgos },
       sender: claimer.addr,
       signer: makeBasicAccountTransactionSigner(claimer),
       boxReferences: [

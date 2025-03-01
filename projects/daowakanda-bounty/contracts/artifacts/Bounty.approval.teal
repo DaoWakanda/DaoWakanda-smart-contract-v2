@@ -182,26 +182,18 @@ issueBounty:
 *if0_end:
 	retsub
 
-// claimBounty(pay)void
+// claimBounty(uint64)void
 *abi_route_claimBounty:
-	// payTxn: pay
-	txn GroupIndex
-	intc 0 // 1
-	-
-	dup
-	gtxns TypeEnum
-	intc 0 //  pay
-	==
+	// amount: uint64
+	txna ApplicationArgs 1
+	btoi
 
-	// argument 0 (payTxn) for claimBounty must be a pay transaction
-	assert
-
-	// execute claimBounty(pay)void
+	// execute claimBounty(uint64)void
 	callsub claimBounty
 	intc 0 // 1
 	return
 
-// claimBounty(payTxn: PayTxn): void
+// claimBounty(amount: uint64): void
 claimBounty:
 	proto 1 0
 
@@ -210,9 +202,8 @@ claimBounty:
 	dup
 
 	// contracts/Bounty.algo.ts:35
-	// addr = payTxn.sender
-	frame_dig -1 // payTxn: PayTxn
-	gtxns Sender
+	// addr = this.txn.sender
+	txn Sender
 	frame_bury 0 // addr: address
 
 	// contracts/Bounty.algo.ts:36
@@ -225,21 +216,30 @@ claimBounty:
 	// Sorry, you have no bounty to claim
 	assert
 
-	// contracts/Bounty.algo.ts:38
-	// amount = this.bountyBox(addr).value
+	// contracts/Bounty.algo.ts:37
+	// assert(amount > 0, 'Invalid bounty amount')
+	frame_dig -1 // amount: uint64
+	intc 1 // 0
+	>
+
+	// Invalid bounty amount
+	assert
+
+	// contracts/Bounty.algo.ts:39
+	// unclaimedAmount = this.bountyBox(addr).value
 	frame_dig 0 // addr: address
 	box_get
 
 	// box value does not exist: this.bountyBox(addr).value
 	assert
 	btoi
-	frame_bury 1 // amount: uint64
+	frame_bury 1 // unclaimedAmount: uint64
 
 	// contracts/Bounty.algo.ts:40
-	// assert(amount > 0, 'No bounty available to claim')
-	frame_dig 1 // amount: uint64
-	intc 1 // 0
-	>
+	// assert(unclaimedAmount >= amount, 'No bounty available to claim')
+	frame_dig 1 // unclaimedAmount: uint64
+	frame_dig -1 // amount: uint64
+	>=
 
 	// No bounty available to claim
 	assert
@@ -257,7 +257,7 @@ claimBounty:
 
 	// contracts/Bounty.algo.ts:43
 	// amount: amount
-	frame_dig 1 // amount: uint64
+	frame_dig -1 // amount: uint64
 	itxn_field Amount
 
 	// contracts/Bounty.algo.ts:44
@@ -283,9 +283,12 @@ claimBounty:
 	itxn_submit
 
 	// contracts/Bounty.algo.ts:49
-	// this.bountyBox(addr).value = 0
+	// this.bountyBox(addr).value = unclaimedAmount - amount
 	frame_dig 0 // addr: address
-	pushbytes 0x0000000000000000
+	frame_dig 1 // unclaimedAmount: uint64
+	frame_dig -1 // amount: uint64
+	-
+	itob
 	box_put
 	retsub
 
@@ -303,7 +306,7 @@ claimBounty:
 
 *call_NoOp:
 	pushbytes 0xf89e0497 // method "issueBounty(pay,uint64,address)void"
-	pushbytes 0xd2762eca // method "claimBounty(pay)void"
+	pushbytes 0x7cebe810 // method "claimBounty(uint64)void"
 	txna ApplicationArgs 0
 	match *abi_route_issueBounty *abi_route_claimBounty
 
