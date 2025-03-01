@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Contract } from '@algorandfoundation/tealscript';
 
 export class DaoWakanda extends Contract {

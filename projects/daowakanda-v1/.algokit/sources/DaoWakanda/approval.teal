@@ -43,8 +43,7 @@ switch *call_NoOp *NOT_IMPLEMENTED *NOT_IMPLEMENTED *NOT_IMPLEMENTED *NOT_IMPLEM
 
 // createApplication(title: string, description: string, endDate: uint64): void
 //
-// This creates a new Dao and also creates the associated
-// ASA.
+// This creates a new Dao.
 // @param title The title of the new Dao.
 // @param description The description of the new DAO.
 // @param endDate The timestamp of the end date.
@@ -278,7 +277,7 @@ createDaoASA:
 	// contracts/DaoWakanda.algo.ts:74
 	// registeredASA = sendAssetCreation({
 	//       configAssetTotal: 1_000_000,
-	//       configAssetName: 'DAO' + this.title.value,
+	//       configAssetName: 'DAOWAKANDA_VOTING',
 	//       configAssetFreeze: this.app.address,
 	//     })
 	itxn_begin
@@ -291,12 +290,8 @@ createDaoASA:
 	itxn_field ConfigAssetTotal
 
 	// contracts/DaoWakanda.algo.ts:76
-	// configAssetName: 'DAO' + this.title.value
-	byte 0x44414f // "DAO"
-	byte 0x7469746c65 // "title"
-	app_global_get
-	extract 2 0
-	concat
+	// configAssetName: 'DAOWAKANDA_VOTING'
+	byte 0x44414f57414b414e44415f564f54494e47 // "DAOWAKANDA_VOTING"
 	itxn_field ConfigAssetName
 
 	// contracts/DaoWakanda.algo.ts:77
