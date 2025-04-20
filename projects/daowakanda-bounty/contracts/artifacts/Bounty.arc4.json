@@ -3,6 +3,29 @@
   "desc": "",
   "methods": [
     {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "issueBountyWithoutPayment",
+      "args": [
+        {
+          "name": "amount",
+          "type": "uint64"
+        },
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
       "name": "issueBounty",
       "args": [
         {
@@ -30,13 +53,6 @@
           "type": "uint64"
         }
       ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "name": "createApplication",
-      "args": [],
       "returns": {
         "type": "void"
       }

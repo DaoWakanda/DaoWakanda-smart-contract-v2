@@ -13,7 +13,7 @@ let admin: algosdk.Account;
 let claimer: algosdk.Account;
 const appAddress = '';
 
-const mbrCostForBountyBox = 131_300;
+const mbrCostForBountyBox = 118_500;
 
 describe('Bounty', () => {
   beforeEach(fixture.beforeEach);
@@ -50,29 +50,103 @@ describe('Bounty', () => {
 
     appClient = createResult.appClient;
 
-    // await appClient.appClient.fundAppAccount({ amount: algokit.microAlgos(100_000) });
+    // await appClient.appClient.fundAppAccount({ amount: algokit.microAlgos(10_262_600) });
+
+    await algorand.send.payment({
+      receiver: appClient.appClient.appAddress,
+      sender: admin.addr,
+      // amount: algokit.microAlgos(10_000_000),
+      signer: algosdk.makeBasicAccountTransactionSigner(admin),
+      amount: algokit.microAlgos(10_118_500),
+    })
   });
 
+  // test('issueBounty (with payment)', async () => {
+  //   const suggestedParams = await algokit.getTransactionParams(undefined, fixture.algorand.client.algod);
+
+  //   const bountyAmount = Number(algokit.algos(5).microAlgos);
+
+  //   const totalAmount = bountyAmount + mbrCostForBountyBox;
+
+  //   console.debug('totalAmount', totalAmount);
+
+  //   const paymentTxn = makePaymentTxnWithSuggestedParamsFromObject({
+  //     from: admin.addr,
+  //     to: appClient.appClient.appAddress,
+  //     amount: totalAmount,
+  //     suggestedParams,
+  //   });
+
+  //   console.debug('claimer', claimer.addr);
+
+  //   const response = await appClient.send.issueBounty({
+  //     args: { payTxn: paymentTxn, amount: bountyAmount, addr: claimer.addr },
+  //     sender: admin.addr,
+  //     signer: makeBasicAccountTransactionSigner(admin),
+  //     boxReferences: [
+  //       {
+  //         appId: appClient.appId,
+  //         name: claimer.addr,
+  //       },
+  //     ],
+  //     // extraFee
+  //   });
+
+  //   const globalState = await appClient.appClient.getGlobalState();
+  //   console.log(await fixture.algorand.client.algod.accountInformation(appClient.appAddress).do());
+  //   console.debug(globalState.lockedAmount);
+    
+  //   // expect(response.confirmation).toBeDefined();
+  // });
+
+  // test('issueBounty twice (with payment)', async () => {
+  //   const suggestedParams = await algokit.getTransactionParams(undefined, fixture.algorand.client.algod);
+
+  //   const bountyAmount = Number(algokit.algos(10).microAlgos);
+
+  //   const totalAmount = bountyAmount;
+
+  //   console.debug('totalAmount', totalAmount);
+
+  //   const paymentTxn = makePaymentTxnWithSuggestedParamsFromObject({
+  //     from: admin.addr,
+  //     to: appClient.appClient.appAddress,
+  //     amount: totalAmount,
+  //     suggestedParams,
+  //   });
+
+  //   console.debug('claimer', claimer.addr);
+
+  //   const response = await appClient.send.issueBounty({
+  //     args: { payTxn: paymentTxn, amount: bountyAmount, addr: claimer.addr },
+  //     sender: admin.addr,
+  //     signer: makeBasicAccountTransactionSigner(admin),
+  //     boxReferences: [
+  //       {
+  //         appId: appClient.appId,
+  //         name: claimer.addr,
+  //       },
+  //     ],
+  //     // extraFee
+  //   });
+
+  //   const globalState = await appClient.appClient.getGlobalState();
+  //   console.log(await fixture.algorand.client.algod.accountInformation(appClient.appAddress).do());
+  //   console.debug(globalState.lockedAmount);
+
+  //   // expect(response.confirmation).toBeDefined();
+  // });
+
+  // 
   test('issueBounty', async () => {
     const suggestedParams = await algokit.getTransactionParams(undefined, fixture.algorand.client.algod);
 
     const bountyAmount = Number(algokit.algos(5).microAlgos);
 
-    const totalAmount = bountyAmount + mbrCostForBountyBox;
-
-    console.debug('totalAmount', totalAmount);
-
-    const paymentTxn = makePaymentTxnWithSuggestedParamsFromObject({
-      from: admin.addr,
-      to: appClient.appClient.appAddress,
-      amount: totalAmount,
-      suggestedParams,
-    });
-
     console.debug('claimer', claimer.addr);
 
-    const response = await appClient.send.issueBounty({
-      args: { payTxn: paymentTxn, amount: bountyAmount, addr: claimer.addr },
+    const response = await appClient.send.issueBountyWithoutPayment({
+      args: { amount: bountyAmount, addr: claimer.addr },
       sender: admin.addr,
       signer: makeBasicAccountTransactionSigner(admin),
       boxReferences: [
@@ -83,6 +157,10 @@ describe('Bounty', () => {
       ],
       // extraFee
     });
+
+    const globalState = await appClient.appClient.getGlobalState();
+    console.log(await fixture.algorand.client.algod.accountInformation(appClient.appAddress).do());
+    console.debug(globalState.lockedAmount);
     
     // expect(response.confirmation).toBeDefined();
   });
@@ -90,23 +168,15 @@ describe('Bounty', () => {
   test('issueBounty twice', async () => {
     const suggestedParams = await algokit.getTransactionParams(undefined, fixture.algorand.client.algod);
 
-    const bountyAmount = Number(algokit.algos(10).microAlgos);
+    const bountyAmount = Number(algokit.algos(5).microAlgos);
 
     const totalAmount = bountyAmount;
 
     console.debug('totalAmount', totalAmount);
-
-    const paymentTxn = makePaymentTxnWithSuggestedParamsFromObject({
-      from: admin.addr,
-      to: appClient.appClient.appAddress,
-      amount: totalAmount,
-      suggestedParams,
-    });
-
     console.debug('claimer', claimer.addr);
 
-    const response = await appClient.send.issueBounty({
-      args: { payTxn: paymentTxn, amount: bountyAmount, addr: claimer.addr },
+    const response = await appClient.send.issueBountyWithoutPayment({
+      args: { amount: bountyAmount, addr: claimer.addr },
       sender: admin.addr,
       signer: makeBasicAccountTransactionSigner(admin),
       boxReferences: [
@@ -117,6 +187,10 @@ describe('Bounty', () => {
       ],
       // extraFee
     });
+
+    const globalState = await appClient.appClient.getGlobalState();
+    console.log(await fixture.algorand.client.algod.accountInformation(appClient.appAddress).do());
+    console.debug(globalState.lockedAmount);
 
     // expect(response.confirmation).toBeDefined();
   });
@@ -125,7 +199,7 @@ describe('Bounty', () => {
     console.debug('claimer', claimer.addr);
 
     const response = await appClient.send.claimBounty({
-      args: { amount: algokit.algos(10).microAlgos },
+      args: { amount: algokit.algos(5).microAlgos },
       sender: claimer.addr,
       signer: makeBasicAccountTransactionSigner(claimer),
       boxReferences: [
@@ -138,6 +212,10 @@ describe('Bounty', () => {
     });
 
     expect(response.txIds).toBeDefined();
+
+    const globalState = await appClient.appClient.getGlobalState();
+    console.log(await fixture.algorand.client.algod.accountInformation(appClient.appAddress).do());
+    console.debug(globalState.lockedAmount);
   });
 
   test('claim remaining', async () => {
@@ -157,7 +235,72 @@ describe('Bounty', () => {
     });
 
     expect(response.txIds).toBeDefined();
+
+    const globalState = await appClient.appClient.getGlobalState();
+    console.log(await fixture.algorand.client.algod.accountInformation(appClient.appAddress).do());
+    console.debug(globalState.lockedAmount);
   });
+
+  // test('claim part', async () => {
+  //   console.debug('claimer', claimer.addr);
+
+  //   const response = await appClient.send.claimBounty({
+  //     args: { amount: algokit.algos(10).microAlgos },
+  //     sender: claimer.addr,
+  //     signer: makeBasicAccountTransactionSigner(claimer),
+  //     boxReferences: [
+  //       {
+  //         appId: appClient.appId,
+  //         name: claimer.addr,
+  //       },
+  //     ],
+  //     extraFee: algokit.microAlgos(1000),
+  //   });
+
+  //   expect(response.txIds).toBeDefined();
+
+  //   const globalState = await appClient.appClient.getGlobalState();
+  //   console.log(await fixture.algorand.client.algod.accountInformation(appClient.appAddress).do());
+  //   console.debug(globalState.lockedAmount);
+  // });
+
+  // test('claim remaining', async () => {
+  //   console.debug('claimer', claimer.addr);
+
+  //   const response = await appClient.send.claimBounty({
+  //     args: { amount: algokit.algos(5).microAlgos },
+  //     sender: claimer.addr,
+  //     signer: makeBasicAccountTransactionSigner(claimer),
+  //     boxReferences: [
+  //       {
+  //         appId: appClient.appId,
+  //         name: claimer.addr,
+  //       },
+  //     ],
+  //     extraFee: algokit.microAlgos(1000),
+  //   });
+
+  //   expect(response.txIds).toBeDefined();
+
+  //   const globalState = await appClient.appClient.getGlobalState();
+  //   console.log(await fixture.algorand.client.algod.accountInformation(appClient.appAddress).do());
+  //   console.debug(globalState.lockedAmount);
+  // });
+
+  // test('claim when no bounty', async () => {
+  //   await expect(appClient.send.claimBounty({
+  //     args: { amount: algokit.algos(10).microAlgos },
+  //     sender: claimer.addr,
+  //     signer: makeBasicAccountTransactionSigner(claimer),
+  //     boxReferences: [
+  //       {
+  //         appId: appClient.appId,
+  //         name: claimer.addr,
+  //       },
+  //     ],
+  //     extraFee: algokit.algos(0.002),
+  //   })).rejects.toBeDefined();
+  // });
 
   test('claim when no bounty', async () => {
     await expect(appClient.send.claimBounty({
@@ -173,6 +316,4 @@ describe('Bounty', () => {
       extraFee: algokit.algos(0.002),
     })).rejects.toBeDefined();
   });
-  
-
 });
