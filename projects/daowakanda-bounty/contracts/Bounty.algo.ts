@@ -15,6 +15,7 @@ export class Bounty extends Contract {
 
   issueBountyWithoutPayment(amount: uint64, addr: Address) {
     assert(amount > 0, 'amount must be greater than zero');
+    assert(this.txn.sender === this.app.creator);
 
     const boxCost = MBR + COST_PER_BOX + COST_PER_BYTE * (8 + 32);
     const walletBalance = this.app.address.balance - this.app.address.minBalance;

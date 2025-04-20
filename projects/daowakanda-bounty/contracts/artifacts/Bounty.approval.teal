@@ -80,12 +80,21 @@ issueBountyWithoutPayment:
 	// amount must be greater than zero
 	assert
 
-	// contracts/Bounty.algo.ts:19
+	// contracts/Bounty.algo.ts:18
+	// assert(this.txn.sender === this.app.creator)
+	txn Sender
+	txna Applications 0
+	app_params_get AppCreator
+	pop
+	==
+	assert
+
+	// contracts/Bounty.algo.ts:20
 	// boxCost = MBR + COST_PER_BOX + COST_PER_BYTE * (8 + 32)
 	intc 2 // 118500
 	frame_bury 0 // boxCost: uint64
 
-	// contracts/Bounty.algo.ts:20
+	// contracts/Bounty.algo.ts:21
 	// walletBalance = this.app.address.balance - this.app.address.minBalance
 	global CurrentApplicationAddress
 	acct_params_get AcctBalance
@@ -96,7 +105,7 @@ issueBountyWithoutPayment:
 	-
 	frame_bury 1 // walletBalance: uint64
 
-	// contracts/Bounty.algo.ts:21
+	// contracts/Bounty.algo.ts:22
 	// balance = walletBalance - this.lockedAmount.value
 	frame_dig 1 // walletBalance: uint64
 	bytec 0 //  "lockedAmount"
@@ -105,7 +114,7 @@ issueBountyWithoutPayment:
 	frame_bury 2 // balance: uint64
 
 	// *if0_condition
-	// contracts/Bounty.algo.ts:23
+	// contracts/Bounty.algo.ts:24
 	// this.bountyBox(addr).exists
 	frame_dig -2 // addr: Address
 	box_len
@@ -114,7 +123,7 @@ issueBountyWithoutPayment:
 	bz *if0_else
 
 	// *if0_consequent
-	// contracts/Bounty.algo.ts:24
+	// contracts/Bounty.algo.ts:25
 	// assert(balance >= amount, "Insufficient balance to issue bounty")
 	frame_dig 2 // balance: uint64
 	frame_dig -1 // amount: uint64
@@ -123,7 +132,7 @@ issueBountyWithoutPayment:
 	// Insufficient balance to issue bounty
 	assert
 
-	// contracts/Bounty.algo.ts:25
+	// contracts/Bounty.algo.ts:26
 	// this.bountyBox(addr).value = this.bountyBox(addr).value + amount
 	frame_dig -2 // addr: Address
 	frame_dig -2 // addr: Address
@@ -139,7 +148,7 @@ issueBountyWithoutPayment:
 	b *if0_end
 
 *if0_else:
-	// contracts/Bounty.algo.ts:27
+	// contracts/Bounty.algo.ts:28
 	// assert(balance >= amount + boxCost, "Insufficient balance to issue bounty")
 	frame_dig 2 // balance: uint64
 	frame_dig -1 // amount: uint64
@@ -150,7 +159,7 @@ issueBountyWithoutPayment:
 	// Insufficient balance to issue bounty
 	assert
 
-	// contracts/Bounty.algo.ts:28
+	// contracts/Bounty.algo.ts:29
 	// this.bountyBox(addr).value = amount
 	frame_dig -2 // addr: Address
 	frame_dig -1 // amount: uint64
@@ -158,7 +167,7 @@ issueBountyWithoutPayment:
 	box_put
 
 *if0_end:
-	// contracts/Bounty.algo.ts:31
+	// contracts/Bounty.algo.ts:32
 	// this.lockedAmount.value = this.lockedAmount.value + amount
 	bytec 0 //  "lockedAmount"
 	dup
@@ -208,7 +217,7 @@ issueBounty:
 	// Push empty bytes after the frame pointer to reserve space for local variables
 	bytec 1 // 0x
 
-	// contracts/Bounty.algo.ts:35
+	// contracts/Bounty.algo.ts:36
 	// assert(amount > 0, 'amount must be greater than zero')
 	frame_dig -2 // amount: uint64
 	intc 1 // 0
@@ -217,13 +226,13 @@ issueBounty:
 	// amount must be greater than zero
 	assert
 
-	// contracts/Bounty.algo.ts:37
+	// contracts/Bounty.algo.ts:38
 	// totalCost = MBR + COST_PER_BOX + COST_PER_BYTE * (8 + 32)
 	intc 2 // 118500
 	frame_bury 0 // totalCost: uint64
 
 	// *if1_condition
-	// contracts/Bounty.algo.ts:39
+	// contracts/Bounty.algo.ts:40
 	// this.bountyBox(addr).exists
 	frame_dig -3 // addr: Address
 	box_len
@@ -232,7 +241,7 @@ issueBounty:
 	bz *if1_else
 
 	// *if1_consequent
-	// contracts/Bounty.algo.ts:40
+	// contracts/Bounty.algo.ts:41
 	// verifyPayTxn(payTxn, {
 	//         sender: this.txn.sender,
 	//         receiver: this.app.address,
@@ -265,7 +274,7 @@ issueBounty:
 	// transaction verification failed: {"txn":"payTxn","field":"amount","expected":"amount"}
 	assert
 
-	// contracts/Bounty.algo.ts:46
+	// contracts/Bounty.algo.ts:47
 	// this.bountyBox(addr).value = this.bountyBox(addr).value + amount
 	frame_dig -3 // addr: Address
 	frame_dig -3 // addr: Address
@@ -281,7 +290,7 @@ issueBounty:
 	b *if1_end
 
 *if1_else:
-	// contracts/Bounty.algo.ts:48
+	// contracts/Bounty.algo.ts:49
 	// verifyPayTxn(payTxn, {
 	//         sender: this.txn.sender,
 	//         receiver: this.app.address,
@@ -316,7 +325,7 @@ issueBounty:
 	// transaction verification failed: {"txn":"payTxn","field":"amount","expected":"totalCost + amount"}
 	assert
 
-	// contracts/Bounty.algo.ts:54
+	// contracts/Bounty.algo.ts:55
 	// this.bountyBox(addr).value = amount
 	frame_dig -3 // addr: Address
 	frame_dig -2 // amount: uint64
@@ -324,7 +333,7 @@ issueBounty:
 	box_put
 
 *if1_end:
-	// contracts/Bounty.algo.ts:57
+	// contracts/Bounty.algo.ts:58
 	// this.lockedAmount.value = this.lockedAmount.value + amount
 	bytec 0 //  "lockedAmount"
 	dup
@@ -353,12 +362,12 @@ claimBounty:
 	bytec 1 // 0x
 	dup
 
-	// contracts/Bounty.algo.ts:61
+	// contracts/Bounty.algo.ts:62
 	// addr = this.txn.sender
 	txn Sender
 	frame_bury 0 // addr: address
 
-	// contracts/Bounty.algo.ts:62
+	// contracts/Bounty.algo.ts:63
 	// assert(this.bountyBox(addr).exists, 'Sorry, you have no bounty to claim')
 	frame_dig 0 // addr: address
 	box_len
@@ -368,7 +377,7 @@ claimBounty:
 	// Sorry, you have no bounty to claim
 	assert
 
-	// contracts/Bounty.algo.ts:63
+	// contracts/Bounty.algo.ts:64
 	// assert(amount > 0, 'Invalid bounty amount')
 	frame_dig -1 // amount: uint64
 	intc 1 // 0
@@ -377,7 +386,7 @@ claimBounty:
 	// Invalid bounty amount
 	assert
 
-	// contracts/Bounty.algo.ts:65
+	// contracts/Bounty.algo.ts:66
 	// unclaimedAmount = this.bountyBox(addr).value
 	frame_dig 0 // addr: address
 	box_get
@@ -387,7 +396,7 @@ claimBounty:
 	btoi
 	frame_bury 1 // unclaimedAmount: uint64
 
-	// contracts/Bounty.algo.ts:66
+	// contracts/Bounty.algo.ts:67
 	// assert(unclaimedAmount >= amount, 'No bounty available to claim')
 	frame_dig 1 // unclaimedAmount: uint64
 	frame_dig -1 // amount: uint64
@@ -396,7 +405,7 @@ claimBounty:
 	// No bounty available to claim
 	assert
 
-	// contracts/Bounty.algo.ts:68
+	// contracts/Bounty.algo.ts:69
 	// sendPayment({
 	//       amount: amount,
 	//       sender: this.app.address,
@@ -407,22 +416,22 @@ claimBounty:
 	intc 0 //  pay
 	itxn_field TypeEnum
 
-	// contracts/Bounty.algo.ts:69
+	// contracts/Bounty.algo.ts:70
 	// amount: amount
 	frame_dig -1 // amount: uint64
 	itxn_field Amount
 
-	// contracts/Bounty.algo.ts:70
+	// contracts/Bounty.algo.ts:71
 	// sender: this.app.address
 	global CurrentApplicationAddress
 	itxn_field Sender
 
-	// contracts/Bounty.algo.ts:71
+	// contracts/Bounty.algo.ts:72
 	// receiver: this.txn.sender
 	txn Sender
 	itxn_field Receiver
 
-	// contracts/Bounty.algo.ts:72
+	// contracts/Bounty.algo.ts:73
 	// note: 'Bounty claimed'
 	pushbytes 0x426f756e747920636c61696d6564 // "Bounty claimed"
 	itxn_field Note
@@ -434,7 +443,7 @@ claimBounty:
 	// Submit inner transaction
 	itxn_submit
 
-	// contracts/Bounty.algo.ts:75
+	// contracts/Bounty.algo.ts:76
 	// this.bountyBox(addr).value = unclaimedAmount - amount
 	frame_dig 0 // addr: address
 	frame_dig 1 // unclaimedAmount: uint64
@@ -443,7 +452,7 @@ claimBounty:
 	itob
 	box_put
 
-	// contracts/Bounty.algo.ts:76
+	// contracts/Bounty.algo.ts:77
 	// this.lockedAmount.value = this.lockedAmount.value - amount
 	bytec 0 //  "lockedAmount"
 	dup
